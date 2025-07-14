@@ -19,7 +19,7 @@ list-style-type:none;
 ul.p{	
 display: grid;
 grid-auto-flow: column;
-grid-template-rows: repeat(11, auto);
+grid-template-rows: repeat(31, auto);
 list-style-type:none;
 }
 
