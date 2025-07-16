@@ -7,8 +7,22 @@ First, I focus on solving problems related to NABE (Japanese hot pot).
 NABE is easy to cook and delicious, but we don’t always know what makes NABE truly "Yummy."  
 This web service helps you understand that.
 
+🌐 Web Site（Web service）
 https://yummyworldxxx.github.io/myweb/
 
-[Yummy Image](nabe.JPG)
+---
 
-　　　　　　　　　　　　　TERUO
+
+## 🔗 Source Code (GitHub)
+👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)
+
+---
+
+## 📷 Yummy Image
+
+
+![Yummy Image](path/to/image.png)
+
+---
+
+TERUO
