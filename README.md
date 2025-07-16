@@ -18,11 +18,5 @@ https://yummyworldxxx.github.io/myweb/
 Bug reports and improvement suggestions are welcome!
 ---
 
-## 📷 Yummy Image
-
-
-![Yummy Image](path/to/image.png)
-
----
 
 TERUO
