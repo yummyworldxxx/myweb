@@ -15,7 +15,7 @@ https://yummyworldxxx.github.io/myweb/
 
 ## 🔗 Source Code (GitHub)
 👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)
-
+Bug reports and improvement suggestions are welcome!
 ---
 
 ## 📷 Yummy Image
