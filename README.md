@@ -16,7 +16,10 @@ Yummy helps you discover the most delicious NABE combinations.
 
 
 
-🌐 Web Site（Web service）
+🌐 Web Site（Web service）:English Language
+https://yummyworldxxx.github.io/myweb/indexe.html 
+
+🌐 Web Site（Web service）:Japanese Language
 https://yummyworldxxx.github.io/myweb/
 
 ---
