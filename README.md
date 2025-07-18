@@ -27,7 +27,7 @@ and lets you rate and explore various NABE soup bases.
 
 ---
 
-## 📸 Yummy Image（ummy Image is one of the features of this web service.）
+## 📸 Yummy Image（Yummy Image is one of the features of this web service.）
 
 ![Yummy Preview](NABE.JPG)
 
