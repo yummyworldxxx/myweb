@@ -14,6 +14,7 @@ It is commonly enjoyed in winter and during gatherings.
 
 Yummy helps you discover the most delicious NABE combinations.
 
+![Yummy Image](nabe.JPG)
 
 
 🌐 Web Site（Web service）:English Language
@@ -24,7 +25,7 @@ https://yummyworldxxx.github.io/myweb/
 
 ---
 
-Yummy Image(nabe.JPG)
+
 
 ## 🔗 Source Code (GitHub)
 👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)
