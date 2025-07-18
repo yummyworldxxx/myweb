@@ -29,7 +29,7 @@ and lets you rate and explore various NABE soup bases.
 
 ## 📸 Yummy Image
 
-![Yummy Preview](nabe.JPG)
+![Yummy Preview](NABE.JPG)
 
 ---
 
