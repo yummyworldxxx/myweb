@@ -24,7 +24,7 @@ https://yummyworldxxx.github.io/myweb/
 
 ---
 
-(nabe.png)
+Yummy Image(nabe.JPG)
 
 ## 🔗 Source Code (GitHub)
 👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)
