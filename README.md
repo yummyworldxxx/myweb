@@ -1,4 +1,4 @@
-# Welcome to Cosmos Project "Yummy"
+# Welcome to Cosmos Project "Yummy"🍲
 
 Yummy is a Cosmos Impact Web Service.
 
@@ -16,6 +16,7 @@ Yummy helps you discover the most delicious NABE combinations.
 
 ![Yummy Image](NABE.JPG)
 
+🌏 Multilingual support (English / Japanese)
 
 🌐 Web Site（Web service）:English Language
 https://yummyworldxxx.github.io/myweb/indexe.html 
