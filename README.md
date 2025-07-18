@@ -1,4 +1,4 @@
-# Welcome to Cosmos Project "Yummy"🍲
+🚀# Welcome to Cosmos Project "Yummy"🚀
 
 Yummy is a Cosmos Impact Web Service.
 
