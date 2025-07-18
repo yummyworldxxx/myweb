@@ -14,7 +14,6 @@ It is commonly enjoyed in winter and during gatherings.
 
 Yummy helps you discover the most delicious NABE combinations.
 
-![Yummy Image](nabe.JPG)
 
 
 🌐 Web Site（Web service）:English Language
