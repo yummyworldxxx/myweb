@@ -20,7 +20,7 @@ list-style-type:none;
 ul.p{	
 display: grid;
 grid-auto-flow: column;
-grid-template-rows: repeat(18, auto);
+grid-template-rows: repeat(19, auto);
 list-style-type:none;
 }
 
