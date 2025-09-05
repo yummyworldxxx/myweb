@@ -21,7 +21,7 @@ list-style-type:none;
 ul.p{	
 display: grid;
 grid-auto-flow: column;
-grid-template-rows: repeat(48, auto);
+grid-template-rows: repeat(49, auto);
 list-style-type:none;
 }
 
