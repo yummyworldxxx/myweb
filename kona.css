@@ -1,0 +1,59 @@
+h1,h2{
+text-align:left;
+margin: 0;
+}
+
+h1 a {
+  text-decoration: none;
+  color: orange;
+  background-color: black;
+  padding: 0px 1px;
+  border-radius: 8px; 
+}
+
+
+
+h1{
+font-size: 24px; 
+}
+
+
+h2{
+font-size: 32px; 
+}
+
+
+
+ul.m{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+list-style-type:none;
+}
+
+ul.k{
+list-style-type:none;
+}
+
+
+
+ul.p{	
+display: grid;
+grid-auto-flow: column;
+grid-template-rows: repeat(1, auto);
+list-style-type:none;
+}
+
+
+li.p{
+list-style-type:none;
+border-style:solid;
+border-width:7px;
+border-color:#FFA500;
+background-color:#ffffff;
+margin-top:10px;
+}
+
+    
+    
+
