@@ -11,6 +11,20 @@ h1 a {
   border-radius: 8px; 
 }
 
+
+h1{
+font-size: 24px; 
+}
+
+
+h2{
+font-size: 32px; 
+}
+
+
+
+
+
 ul.m{
 display: flex;
 flex-direction: row;
