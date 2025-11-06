@@ -14,7 +14,7 @@
 
 <style>
 
-header{
+.site-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,18 +23,18 @@ header{
   height: 60px; 
 }
 
-ul {
+.site-header ul {
   list-style: none;
   display: flex;
   gap:15px;  
 } 
 
-a {
+.site-header a {
   color: orange;
   text-decoration: none;
 }
 
-a:hover {
+.site-header a:hover {
   color: #ffcc00;
 }
 
@@ -42,13 +42,44 @@ body {
   margin: 0;
 }
 
-h1 {
+.site-header h1 {
   cursor: pointer;
 }
 
-h1:hover {
+.site-header h1:hover {
   color: #ffcc00;
 }
+
+
+
+
+
+
+
+
+.site-footer {
+  position: fixed;   /* 画面下に固定 */
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 14px;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 </style>
@@ -57,7 +88,7 @@ h1:hover {
 
 <body>
 
-<header>
+<header class="site-header">
 <h1><a href="index.html">Yummy</a></h1>
 
 <ul>
@@ -72,7 +103,19 @@ h1:hover {
 
 </header>
 
-
+<footer class="site-footer">
+  <ul>
+    <li>■評価基準（過去の自分にオススメできるか）</li>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。過去の自分に超オススメできる。</li>
+    <li>4.0 また食べたい。過去の自分にオススメできる。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+  </ul>
+</footer>
 
 
 
