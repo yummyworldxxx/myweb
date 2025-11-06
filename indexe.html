@@ -14,7 +14,7 @@
 
 <style>
 
-header{
+.site-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,18 +23,18 @@ header{
   height: 60px; 
 }
 
-ul {
+.site-header ul {
   list-style: none;
   display: flex;
   gap:15px;  
 } 
 
-a {
+.site-header a {
   color: orange;
   text-decoration: none;
 }
 
-a:hover {
+.site-header a:hover {
   color: #ffcc00;
 }
 
@@ -42,13 +42,44 @@ body {
   margin: 0;
 }
 
-h1 {
+.site-header h1 {
   cursor: pointer;
 }
 
-h1:hover {
+.site-header h1:hover {
   color: #ffcc00;
 }
+
+
+
+
+
+
+
+
+.site-footer {
+  position: fixed;   
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 14px;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 </style>
@@ -57,15 +88,13 @@ h1:hover {
 
 <body>
 
-<header>
+<header class="site-header">
 <h1><a href="index.html">Yummy</a></h1>
 
-
 <ul>
-
 <li><button><a href="indexe.html">English</a></button><button><a href="index.html">Japanese</a></button></li>
 <li><a href="nabee.html">NABE</a></li>
-<li><a href="nabediarye.html">NABEDiary</a></li>
+<li><a href="nabediarye.html">NABEiary</a></li>
 <li><a href="nagoyae.html">YummyNagoya</a></li>
 <li><a href="storye.html">Story</a></li>
 <li><a href="visione.html">Vision</a></li>
@@ -74,6 +103,19 @@ h1:hover {
 
 </header>
 
+<footer class="site-footer">
+  <ul>
+    <li>■ Rating Criteria (Would I recommend it to my past self?)</li>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again. Highly recommend to my past self.</li>
+    <li>4.0  Want to eat again. Recommend to my past self.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+  </ul>
+</footer>
 
 
 
