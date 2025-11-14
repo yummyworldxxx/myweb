@@ -1,0 +1,68 @@
+.site-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: orange; 
+  height: 60px; 
+}
+
+.site-header ul {
+  list-style: none;
+  display: flex;
+  gap:15px;  
+} 
+
+.site-header a {
+  color: orange;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: #ffcc00;
+}
+
+
+.site-header h1 {
+  font-size: 40px; 
+}
+
+
+.site-header ul li a {
+  font-size: 20px;
+}
+
+
+body {
+  margin: 0;
+}
+
+.site-header h1 {
+  cursor: pointer;
+}
+
+.site-header h1:hover {
+  color: #ffcc00;
+}
+
+
+
+
+
+.site-footer {
+  position: fixed;   /* 画面下に固定 */
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 15px;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
