@@ -12,6 +12,7 @@ h1 a {
 }
 
 
+
 h1{
 font-size: 24px; 
 }
@@ -20,8 +21,6 @@ font-size: 24px;
 h2{
 font-size: 32px; 
 }
-
-
 
 
 
@@ -41,7 +40,7 @@ list-style-type:none;
 ul.p{	
 display: grid;
 grid-auto-flow: column;
-grid-template-rows: repeat(30, auto);
+grid-template-rows: repeat(1, auto);
 list-style-type:none;
 }
 
