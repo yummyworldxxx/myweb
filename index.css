@@ -60,6 +60,9 @@ body {
   color: orange;
   background:black;
   font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-footer ul {
@@ -67,6 +70,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.site-footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffcc00;
+}
+
 
 
 
