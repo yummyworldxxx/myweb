@@ -4,7 +4,7 @@
   align-items: center;
   background-color: black;
   color: orange; 
-  height: 70px; 
+  height: 75px; 
 }
 
 .site-header ul {
@@ -26,16 +26,16 @@
 
 
 .site-header h1 {
-  font-size: 50px; 
+  font-size: 55px; 
 }
 
 .site-header h2 {
-  font-size: 24px; 
+  font-size: 27px; 
 }
 
 
 .site-header ul li a {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 
@@ -61,7 +61,7 @@ body {
   width: 100%;
   color: orange;
   background:black;
-  font-size: 17px;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
