@@ -18,6 +18,13 @@
   text-decoration: none;
 }
 
+.u-yellow {
+  color: yellow;   /* u だけ黄色 */
+}
+
+
+
+
 .site-header a:hover {
   color: #ffcc00;
 }
