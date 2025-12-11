@@ -68,7 +68,7 @@ body {
   width: 100%;
   color: orange;
   background:black;
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,6 +88,74 @@ body {
 .site-footer a:hover {
   color: #ffcc00;
 }
+
+
+
+
+/* スマホ（最大幅 600px 以下）向け */
+@media (max-width: 600px) {
+
+  /* ヘッダー全体 */
+  .site-header {
+    flex-direction: column;   /* PCは横並び→スマホは縦並び */
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* タイトル（Yummy） */
+  .site-header h1 {
+    font-size: 40px;
+  }
+
+  /* サブタイトル */
+  .site-header h2 {
+    font-size: 16px;
+  }
+
+  /* ナビの文字 */
+  .site-header ul li a {
+    font-size: 20px;
+  }
+
+
+  /* 画像をスマホサイズに自動で縮小 */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* フッターはスマホで縦並びにしたほうが読みやすい */
+  .site-footer {
+    flex-direction: column;
+    font-size: 15px;
+    padding: 10px 0;
+    position: static;  /* 固定を解除。スマホだと邪魔なので。 */
+  }
+
+  .site-footer ul {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
