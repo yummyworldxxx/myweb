@@ -4,7 +4,7 @@
   align-items: center;
   background-color: black;
   color: orange; 
-  height: 75px; 
+  height: 105px; 
 }
 
 .site-header ul {
@@ -68,7 +68,7 @@ body {
   width: 100%;
   color: orange;
   background:black;
-  font-size: 17px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,9 +114,15 @@ body {
     margin:0;
   }
 
+.site-header h3 {
+    font-size: 11px;
+    margin:0;
+  }
+
   /* ナビの文字 */
   .site-header ul li a {
     font-size: 20px;
+    
   }
 
 
