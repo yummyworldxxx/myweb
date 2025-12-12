@@ -99,21 +99,19 @@ body {
   .site-header {
     flex-direction: column;   /* PCは横並び→スマホは縦並び */
     height:auto;
-    text-align: center;
-
-    
+    text-align: center;  
     }
 
   /* タイトル（Yummy） */
   .site-header h1 {
     font-size: 40px;
-    margin-bottom: 0;
+    margin:0;
   }
 
   /* サブタイトル */
   .site-header h2 {
     font-size: 16px;
-    margin-top: 0;
+    margin:0;
   }
 
   /* ナビの文字 */
