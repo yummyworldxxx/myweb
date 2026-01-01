@@ -1,26 +1,174 @@
-h1,h2{
-text-align:left;
-margin: 0;
-}
-
-h1 a {
-  text-decoration: none;
-  color: orange;
+.site-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
-  padding: 0px 1px;
-  border-radius: 8px; 
+  color: orange; 
+  height: 75px; 
+}
+
+.site-header ul {
+  list-style: none;
+  display: flex;
+  gap:7px;  
+} 
+
+.site-header a {
+  color: orange;
+  text-decoration: none;
+}
+
+.u-yellow {
+  color: yellow;   /* u だけ黄色 */
 }
 
 
 
-h1{
-font-size: 24px; 
+
+.site-header a:hover {
+  color: #ffcc00;
 }
 
 
-h2{
-font-size: 32px; 
+
+
+.site-header h1 {
+  font-size: 57px; 
 }
+
+.site-header h2 {
+  font-size: 17px; 
+}
+
+.site-header h3 {
+    font-size: 15px;
+  }
+
+
+.site-header ul li a {
+  font-size: 15px;
+}
+
+
+body {
+  margin: 0;
+}
+
+.site-header h1 {
+  cursor: pointer;
+}
+
+.site-header h1:hover {
+  color: #ffcc00;
+}
+
+
+
+
+
+.site-footer {
+  position: fixed;   /* 画面下に固定 */
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffcc00;
+}
+
+
+
+
+/* スマホ（最大幅 600px 以下）向け */
+@media (max-width: 600px) {
+
+  /* ヘッダー全体 */
+  .site-header {
+    flex-direction: column;   /* PCは横並び→スマホは縦並び */
+    height:auto;
+    text-align: center;  
+    }
+
+  /* タイトル（Yummy） */
+  .site-header h1 {
+    font-size: 40px;
+    margin:0;
+  }
+
+  /* サブタイトル */
+  .site-header h2 {
+    font-size: 15px;
+    margin:0;
+  }
+
+.site-header h3 {
+    font-size: 12px;
+    margin:0;
+  }
+
+  /* ナビの文字 */
+  .site-header ul li a {
+    font-size: 16px;
+  }
+
+
+.site-header ul {
+    margin:0;
+  }
+
+
+
+
+
+
+  /* 画像をスマホサイズに自動で縮小 */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* フッターはスマホで縦並びにしたほうが読みやすい */
+  .site-footer {
+    flex-direction: column;
+    font-size: 15px;
+    position: static;  /* 固定を解除。スマホだと邪魔なので。 */
+  }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
