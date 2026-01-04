@@ -37,16 +37,14 @@
 }
 
 .site-header h2 {
-  font-size: 17px; 
+  font-size: 13px; 
 }
 
-.site-header h3 {
-    font-size: 15px;
-  }
+
 
 
 .site-header ul li a {
-  font-size: 11px;
+  font-size: 15px;
 }
 
 
@@ -114,14 +112,11 @@ body {
 
   /* サブタイトル */
   .site-header h2 {
-    font-size: 15px;
+    font-size: 14px;
     margin:0;
   }
 
-.site-header h3 {
-    font-size: 12px;
-    margin:0;
-  }
+
 
   /* ナビの文字 */
   .site-header ul li a {
