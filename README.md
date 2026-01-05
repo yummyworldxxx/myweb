@@ -1,57 +1,32 @@
 # 🚀 Welcome to Cosmos Project "Yummy" 🚀
 
-**Yummy** is a Cosmos Impact Web Service.
-
-It aims to solve issues related to eating.  
-To start, I focus on solving problems related to **NABE** (Japanese hot pot).
-
-NABE is easy to cook and delicious,  
-but we don’t always know what makes NABE truly "Yummy."  
-This web service helps you understand that.
+**Yummy** is a long-term food review archive based on real eating experiences.  
+It records dishes from Nagoya, Tokyo, and beyond, using an original rating system centered on the **“4.0 wall.”**
 
 ---
 
-## 🍲 What is NABE?
+## 🇯🇵 Yummyとは？
 
-**NABE** is a Japanese-style hot pot dish where various ingredients—like vegetables, meat, tofu, and noodles—are cooked together in a shared pot.  
-It’s commonly enjoyed in winter and during gatherings.
-
-But I eat it in summer too. Why not? 😎🍲
-
----
-
-## 🔍 What Yummy Can Do
-
-**Yummy** helps you discover the most delicious NABE combinations  
-and lets you rate and explore various NABE soup bases.
-
----
-
-## 📸 Yummy Image（Yummy Image is one of the features of this web service.）
-
-![Yummy Preview](NABE.JPG)
+**Yummy** は、実際に食べた体験をもとにした、長期的な食レビューのアーカイブです。  
+名古屋や東京を中心に、さまざまな地域の料理を  
+「**4.0の壁**」を軸にした独自の評価基準で記録しています。
 
 ---
 
 ## 🌏 Multilingual Support
-
 - English / Japanese
 
 ---
 
 ## 🌐 Web Service
-
 - [English Version](https://yummyworldxxx.github.io/myweb/indexe.html)  
 - [Japanese Version](https://yummyworldxxx.github.io/myweb/)
 
 ---
 
 ## 🔗 Source Code on GitHub
-
 👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)  
 Bug reports and improvement suggestions are welcome!
-
----
 
 <p align="right">
   — TERUO
