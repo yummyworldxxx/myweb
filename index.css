@@ -65,7 +65,7 @@ body {
 
 
 .site-footer {
-  position: fixed;   /* 画面下に固定 */
+  position: sticky;   /* 画面下に固定 */
   bottom: 0;
   width: 100%;
   color: orange;
