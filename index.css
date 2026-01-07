@@ -110,6 +110,11 @@ body {
     margin:0;
   }
 
+   .site-header h1 {
+    align-self: flex-start; /* 左寄せ */
+    margin-left: 10px;      /* 左端ベタ付き防止（好みで） */
+  }
+
   /* サブタイトル */
   .site-header h2 {
     font-size: 14px;
