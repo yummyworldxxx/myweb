@@ -33,7 +33,7 @@
 
 
 .site-header h1 {
-  font-size: 55px; 
+  font-size: 45px; 
 }
 
 .site-header h2 {
@@ -46,6 +46,15 @@
 .site-header ul li a {
   font-size: 12px;
 }
+
+
+.logo {
+  width: 30px;   /* ←ここ小さくする */
+     /* 縦横比そのまま */
+}
+
+
+
 
 
 body {
