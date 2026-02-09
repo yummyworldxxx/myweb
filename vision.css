@@ -22,3 +22,35 @@ background-color:#000000;
 p{
 color:#ffffff;
 }
+
+
+
+ 
+
+
+
+
+
+
+/* スマホ（最大幅 600px 以下）向け */
+@media (max-width: 600px) {
+
+  p{
+    font-size: 12px;
+  }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
