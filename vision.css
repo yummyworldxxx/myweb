@@ -1,19 +1,60 @@
-h1{
-text-align:left;
-margin: 0;
-}
 
-h1 a {
-  text-decoration: none;
-  color: orange;
+
+.site-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
-  padding: 0px 1px;
-  border-radius: 8px; 
+  color: orange; 
+  height: 75px; 
 }
 
-h1{
-font-size: 24px; 
+.site-header ul {
+  list-style: none;
+  display: flex;
+  gap:7px;  
+} 
+
+.site-header a {
+  color: orange;
+  text-decoration: none;
 }
+
+.u-yellow {
+  color: yellow;   /* u だけ黄色 */
+}
+
+
+
+
+.site-header a:hover {
+  color: #ffcc00;
+}
+
+
+
+
+.site-header h1 {
+  font-size: 45px; 
+}
+
+.site-header h2 {
+  font-size: 11px; 
+}
+
+
+
+
+.site-header ul li a {
+  font-size: 11px;
+}
+
+
+.logo {
+  width: 30px;   /* ←ここ小さくする */
+     /* 縦横比そのまま */
+}
+
 
 
 body{
@@ -25,9 +66,49 @@ color:#ffffff;
 
 
 
- 
+
+body {
+  margin: 0;
+}
+
+.site-header h1 {
+  cursor: pointer;
+}
+
+.site-header h1:hover {
+  color: #ffcc00;
+}
 
 
+
+
+
+.site-footer {
+  position: sticky;   /* 画面下に固定 */
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffcc00;
+}
 
 
 
@@ -35,11 +116,70 @@ color:#ffffff;
 /* スマホ（最大幅 600px 以下）向け */
 @media (max-width: 600px) {
 
-  p{
-    font-size: 12px;
+  /* ヘッダー全体 */
+  .site-header {
+    flex-direction: column;   /* PCは横並び→スマホは縦並び */
+    height:auto;
+    text-align: center;  
+    }
+
+  /* タイトル（Yummy） */
+  .site-header h1 {
+    font-size: 40px;
+    margin:0;
   }
 
-} 
+   .site-header h1 {
+    align-self: flex-start; /* 左寄せ */
+    margin-left: 10px;      /* 左端ベタ付き防止（好みで） */
+  }
+
+  /* サブタイトル */
+  .site-header h2 {
+    font-size: 14px;
+    margin:0;
+  }
+
+
+
+  /* ナビの文字 */
+  .site-header ul li a {
+    font-size: 13px;
+  }
+
+
+.site-header ul {
+    margin:0;
+  }
+
+
+
+
+
+
+  /* 画像をスマホサイズに自動で縮小 */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* フッターはスマホで縦並びにしたほうが読みやすい */
+  .site-footer {
+    flex-direction: column;
+    font-size: 15px;
+    position: static;  /* 固定を解除。スマホだと邪魔なので。 */
+  }
+
+ 
+}
+
+
+
+
+
+
+
+
 
 
 
