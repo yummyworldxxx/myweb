@@ -1,33 +1,99 @@
-# 🚀 Welcome to Cosmos Project "Yummy" 🚀
+🚀 Welcome to Cosmos Project "Yummy" 🚀
 
-**Yummy** is a long-term food review archive based on real eating experiences.  
-It records dishes from Nagoya, Tokyo, and beyond, using an original rating system centered on the **“4.0 wall.”**
+Yummy is a real-food review project.
+It is a long-term food data asset built on a single absolute principle:
 
----
+4.0 must be rare.
 
-## 🇯🇵 Yummyとは？
+If everything is 4.0, 4.0 has no value.
 
-**Yummy** は、実際に食べた体験をもとにした、長期的な食レビューのアーカイブです。  
-名古屋や東京を中心に、さまざまな地域の料理を  
-「**4.0の壁**」を軸にした独自の評価基準で記録しています。
+🧱 The 4.0 Rule
 
----
+Ratings are defined as:
+1.0 = Bad
+2.0 = Not good
+3.0 = Normal
+3.5 = Pretty good
+--- High Wall ---
+4.0 = I want to eat this again
+4.5 = I will definitely eat this again
+5.0 = God
 
-## 🌏 Multilingual Support
-- English / Japanese
+4.0 is not “pretty good.”
+4.0 is desire.
 
----
+🍜 About This Project
 
-## 🌐 Web Service
-- [English Version](https://yummyworldxxx.github.io/myweb/indexe.html)  
-- [Japanese Version](https://yummyworldxxx.github.io/myweb/)
+Real meals recorded over time
 
----
+Same restaurant, different days, compared
 
-## 🔗 Source Code on GitHub
-👉 [Yummy GitHub Repository](https://github.com/yummyworldxxx/myweb)  
-Bug reports and improvement suggestions are welcome!
+Prices included
 
-<p align="right">
-  — TERUO
-</p>
+All photos taken by the eater
+
+Evaluation logic = Reality > Popularity
+
+Started: May 18, 2025
+
+Built with only HTML, CSS, JavaScript, and Google App Script — and obsession.
+
+🌏 Live Website
+
+🇯🇵 Japanese: [Link]
+🇬🇧 English: [Link]
+
+🧠 Philosophy
+
+Food is data.
+
+Even at the same chain restaurant,
+results vary depending on the day,
+temperature retention, and how it’s prepared.
+
+Consistency should be tested.
+Emotion should be recorded.
+Desire should be measured.
+
+🔬 Long-Term Vision
+
+To create a transparent global food data asset
+where ratings actually mean something.
+
+An open evaluation system.
+A resistance against inflated scoring culture.
+
+🤝 Why Clone?
+
+If you care about:
+
+Rating system design
+
+Structured review logic
+
+Long-term data projects
+
+Independent web building
+
+Philosophy-driven software
+
+Clone it.
+Fork it.
+Improve it.
+
+Break the 4.0 wall.
+
+⭐ Support
+
+If this idea resonates with you:
+
+Star the repository
+
+Fork the project
+
+Build your own food data asset
+
+👉 https://github.com/yummyworldxxx/myweb
+
+— TERUO
+Founder of Yummy
