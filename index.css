@@ -1,8 +1,51 @@
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* 三本線ボタン */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* メニュー本体 */
+.menu {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  padding: 15px;
+  display: none; /* 最初は非表示 */
+}
+
+/* メニュー中身 */
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+
+
+
 
 .site-header{
   display: flex;
-  justify-content: space-between;
+  
   align-items: center;
   background-color: black;
   color: orange; 
