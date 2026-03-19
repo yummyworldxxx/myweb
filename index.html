@@ -125,6 +125,8 @@ function toggleMenu() {
 
 </header>
 
+<div id="articles">
+
 
 <article>
 26/3/18（投稿日）TERUO＠teruo<br>
@@ -927,7 +929,7 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 </article>
 
 
-
+</div>
 
 
 
@@ -999,34 +1001,30 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 </footer>
 
-
 <script>
 function sortByScore() {
-  const articles = Array.from(document.querySelectorAll("article"));
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
 
   const items = articles.map(article => {
+    const score = parseFloat(article.querySelector(".score").dataset.score);
     return {
       article: article,
       hr: article.nextElementSibling,
-      score: parseFloat(article.querySelector(".score").dataset.score)
+      score: score
     };
   });
 
   items.sort((a, b) => b.score - a.score);
 
-  const parent = articles[0].parentNode;
-
   items.forEach(item => {
-    parent.appendChild(item.article);
+    container.appendChild(item.article);
     if (item.hr && item.hr.tagName === "HR") {
-      parent.appendChild(item.hr);
+      container.appendChild(item.hr);
     }
   });
 }
 </script>
-
-
-
 
 
 
