@@ -128,6 +128,7 @@ function toggleMenu() {
  <button onclick="sortByDate()">新着順</button>
  <button onclick="sortByScore()">★の評価（高い順）</button>
  <button onclick="sortByScoreLow()">★の評価（低い順）</button>
+ <button onclick="filterHighScore()">★4.0以上</button>
 </div>
 
 
@@ -1009,6 +1010,34 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 
 <script>
+
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  articles.sort((a, b) => {
+    const textA = a.innerText;
+    const textB = b.innerText;
+
+    // 一番最初の投稿日を取る
+    const dateA = textA.match(/^\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+    const dateB = textB.match(/^\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+
+    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
+
+    return dB - dA;
+  });
+
+  articles.forEach(article => container.appendChild(article));
+}
+
+
+
+
+
+
+
 function sortByScore() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
@@ -1037,25 +1066,7 @@ function sortByScore() {
   articles.forEach(article => container.appendChild(article));
 }
 
-function sortByDate() {
-  const container = document.getElementById("articles");
-  const articles = Array.from(container.querySelectorAll("article"));
 
-  articles.sort((a, b) => {
-    const textA = a.innerText;
-    const textB = b.innerText;
-
-    const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
-    const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
-
-    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
-    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
-
-    return dB - dA;
-  });
-
-  articles.forEach(article => container.appendChild(article));
-}
 
 function sortByScoreLow() {
   const container = document.getElementById("articles");
@@ -1084,6 +1095,56 @@ function sortByScoreLow() {
 
   articles.forEach(article => container.appendChild(article));
 }
+
+
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  // ① 4.0以上だけ抽出
+  const filtered = articles.filter(article => {
+    const score = parseFloat(article.querySelector(".score").dataset.score);
+    return score >= 4.0;
+  });
+
+  // ② スコア → 投稿日の順でソート
+  filtered.sort((a, b) => {
+    const scoreA = parseFloat(a.querySelector(".score").dataset.score);
+    const scoreB = parseFloat(b.querySelector(".score").dataset.score);
+
+    // ① まずスコアで並び替え（高い順）
+    if (scoreB !== scoreA) {
+      return scoreB - scoreA;
+    }
+
+    // ② 同じスコアなら投稿日で並び替え（新しい順）
+    const textA = a.innerText;
+    const textB = b.innerText;
+
+    const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+    const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+
+    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
+
+    return dB - dA;
+  });
+
+  // ③ 一旦全部非表示
+  articles.forEach(article => article.style.display = "none");
+
+  // ④ フィルタされたものだけ表示＋順番通りに並べる
+  filtered.forEach(article => {
+    article.style.display = "block";
+    container.appendChild(article);
+  });
+}
+
+
+
+
+
+
 </script>
 
 
