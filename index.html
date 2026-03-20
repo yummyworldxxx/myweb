@@ -1007,8 +1007,8 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 </footer>
 
-<script>
 
+<script>
 function sortByScore() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
@@ -1016,46 +1016,46 @@ function sortByScore() {
   articles.sort((a, b) => {
     const scoreA = parseFloat(a.querySelector(".score").dataset.score);
     const scoreB = parseFloat(b.querySelector(".score").dataset.score);
-    return scoreB - scoreA;
+
+    if (scoreB !== scoreA) {
+      return scoreB - scoreA;
+    }
+
+    const textA = a.innerText;
+    const textB = b.innerText;
+
+    const ateA = textA.match(/Ate day：(\d{2}\/\d{1,2}\/\d{1,2})/)[1];
+    const ateB = textB.match(/Ate day：(\d{2}\/\d{1,2}\/\d{1,2})/)[1];
+
+    const dA = new Date(`20${ateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${ateB.replace(/\//g, '-')}`);
+
+    return dB - dA;
   });
 
-  articles.forEach(article => {
-    container.appendChild(article);
-  });
+  articles.forEach(article => container.appendChild(article));
 }
 
-</script>
-
-
-
-<script>
 function sortByDate() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
 
   articles.sort((a, b) => {
-    // articleの最初のテキスト（投稿日）を取得
     const textA = a.innerText;
     const textB = b.innerText;
 
-    // 26/3/18 みたいな日付を取得
     const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
     const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
 
-    // Date型に変換
     const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
     const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
 
-    return dB - dA; // 新しい順
+    return dB - dA;
   });
 
-  articles.forEach(article => {
-    container.appendChild(article);
-  });
+  articles.forEach(article => container.appendChild(article));
 }
-</script>
 
-<script>
 function sortByScoreLow() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
@@ -1063,14 +1063,27 @@ function sortByScoreLow() {
   articles.sort((a, b) => {
     const scoreA = parseFloat(a.querySelector(".score").dataset.score);
     const scoreB = parseFloat(b.querySelector(".score").dataset.score);
-    return scoreA - scoreB; // ← ここが逆（低い順）
+
+    if (scoreA !== scoreB) {
+      return scoreA - scoreB;
+    }
+
+    const textA = a.innerText;
+    const textB = b.innerText;
+
+    const ateA = textA.match(/Ate day：(\d{2}\/\d{1,2}\/\d{1,2})/)[1];
+    const ateB = textB.match(/Ate day：(\d{2}\/\d{1,2}\/\d{1,2})/)[1];
+
+    const dA = new Date(`20${ateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${ateB.replace(/\//g, '-')}`);
+
+    return dB - dA;
   });
 
-  articles.forEach(article => {
-    container.appendChild(article);
-  });
+  articles.forEach(article => container.appendChild(article));
 }
 </script>
+
 
 
 
