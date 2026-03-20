@@ -1,3 +1,27 @@
+.sort-buttons {
+  display: flex;
+  gap: 5px;        /* ボタンの間隔 */
+  margin: 5px 0;
+}
+
+.sort-buttons button {
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
 article {
   border-bottom: 1px solid #000000;
   padding-bottom: 10px;

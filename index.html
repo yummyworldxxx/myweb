@@ -124,9 +124,13 @@ function toggleMenu() {
 
 
 
-<li>
-<button onclick="sortByScore()">★の評価（高い順）</button>
-</li>
+<div class="sort-buttons">
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">★の評価（高い順）</button>
+ <button onclick="sortByScoreLow()">★の評価（低い順）</button>
+</div>
+
+
 
 <hr>
 
@@ -1021,6 +1025,57 @@ function sortByScore() {
 }
 
 </script>
+
+
+
+<script>
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  articles.sort((a, b) => {
+    // articleの最初のテキスト（投稿日）を取得
+    const textA = a.innerText;
+    const textB = b.innerText;
+
+    // 26/3/18 みたいな日付を取得
+    const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+    const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+
+    // Date型に変換
+    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
+
+    return dB - dA; // 新しい順
+  });
+
+  articles.forEach(article => {
+    container.appendChild(article);
+  });
+}
+</script>
+
+<script>
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  articles.sort((a, b) => {
+    const scoreA = parseFloat(a.querySelector(".score").dataset.score);
+    const scoreB = parseFloat(b.querySelector(".score").dataset.score);
+    return scoreA - scoreB; // ← ここが逆（低い順）
+  });
+
+  articles.forEach(article => {
+    container.appendChild(article);
+  });
+}
+</script>
+
+
+
+
+
 
 </body>
 </html>
