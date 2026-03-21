@@ -4,8 +4,8 @@
 
 <meta charset="UTF-8">
 
-<title>YOSHIO 作品集｜YummyWorld(Yummy World)</title>
 
+<title>YOSHIO 作品集｜YummyWorld(Yummy World)</title>
 
 
 <link rel="stylesheet" href="index.css" media="all">
@@ -24,16 +24,21 @@
 
 </head>
 
-
-
 <body>
+
+
 
 
 <header class="site-header">
 <h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
 
+
+
 <h2><span class="u-pink">YOSHIO 作品集</span><br>
 1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
+
+
+
 
 <ul>
 <li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
@@ -42,11 +47,13 @@
 <li><a href="ramen.html">ラーメン</a></li>
 <li><a href="okonomiyaki.html">お好み焼き</a></li>
 </ul>
-
 <ul>
 <li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
 <li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+
 </ul>
+
+
 
 
 
@@ -74,6 +81,29 @@
 
 
 
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="all.html">全ジャンル</a>
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>
+  
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
 
 
 
@@ -87,43 +117,120 @@
 </header>
 
 
-<div>
+
+
+<div class="sort-buttons">
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+ <button onclick="filterHighScore()">4.0以上</button>
+</div>
+
+
+
+<hr>
+
+
+<div id="articles">
+
+
+
+
+
+
+<article>
 26/1/30（投稿日）YOSHIO＠yoshio<br>
 NYスタイルの切り分けピザ。大型のガスオーブンで本場感あり。焼成は約350℃。手のひらより大きい1/8が2枚でボリュームは満足、
 味も悪くはないが、ぼんやりした味のチーズが重く、全体的にファーストフード寄り。トマトのフレッシュさやパリッと感・
 ジューシーさは弱く、モサつく印象。出来立てじゃない前提のNYピザ特性もあるかも。ナポリピッツァ派だと再確認。<br>
 ■チーズピザ、ハラペーニョピザ、コーラ<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■maple pizza<br>
 ■東京都台東区<br>
 ■総額1600円<br>
 ■Ate day：26/1/23<br>
 <img src="imagetokyo23/pizza2.png" alt="ピザの画像" width="200" height="220">
-</div>
-
-<hr>
+</article>
 
 
-
-
-
-
-<div>
+<article>
 25/12/29（投稿日）YOSHIO＠yoshio<br>
 ほのかな塩味と小麦の甘みで生地までおいしく、パリッとした食感。オリーブオイルとモッツァレラの甘み、
 ジューシーさ。トマトの甘酸っぱさが抜群。食後感も軽い。「これぞピザ」。<br>
 ■マルゲリータ、コーラ（×まずはそのままを、極限まで味わって食うべし！）<br>
-⇒★★★★⋆ 4.5<br>
+⇒★★★★⋆ <span class="score" data-score="4.5">4.5</span><br>
 ■Pizzeria e Trattoria da ISA<br>
 ■〒153-0042 東京都目黒区青葉台１丁目１４−１７<br>
 ■3000円<br>
 ■Ate day：25/11/2<br>
 <img src="imagetokyo23/pizza.png" alt="ピザの画像" width="200" height="220">
 <img src="imagetokyo23/pizzastore.png" alt="ピザ店の画像" width="200" height="220">（自分が撮った写真）
+</article>
+
+
 
 </div>
 
-<hr>
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+  </ul>
+
+
+<ul>
+
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="yakiniku.html">焼肉</a></li>
+<li><a href="friedrice.html">炒飯</a></li>
+<li><a href="tenshinhan.html">天津飯</a></li>
+</ul>
+
+<ul>
+
+<li><a href="chiken.html">チキン</a></li>
+<li><a href="doria.html">ドリア</a></li>
+<li><a href="yakisoba.html">焼きそば</a></li>
+<li><a href="pasta.html">パスタ</a></li>
+<li><a href="hoikoro.html">回鍋肉</a></li>
+<li><a href="taiwansubuta.html">台湾酢豚</a></li>
+<li><a href="karaage.html">唐揚げ</a></li>
+</ul>
+
+<ul>
+<li><a href="tebasaki.html">手羽先</a></li>
+<li><a href="pizza.html">ピザ</a></li>
+<li><a href="JagaButter.html">じゃがバター</a></li>
+<li><a href="mabo.html">麻婆</a></li>
+<li><a href="hamburg.html">ハンバーグ</a></li>
+<li><a href="yoshio.html">YOSHIO</a></li>
+<li><a href="iefriedrice.html">炒飯（家飯）</a></li>
+</ul>
+
+<ul>
+<li><a href="aburasoba.html">油そば</a></li>
+<li><a href="soup.html">スープ</a></li>
+<li><a href="iepod.html">鍋（家飯）</a></li>
+<li><a href="cook.html">家飯</a></li>
+<li><a href="nabe.html">鍋の素_比較</a></li>
+<li><a href="nabediary.html">鍋_研究日記</a></li>
+</ul>
 
 
 
@@ -132,24 +239,129 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 
 
+</footer>
+
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
+
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
+
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
+
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
+
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
+
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
+
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
+
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
+
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("img").forEach(img => {
+    img.loading = "lazy";
+  });
+});
+</script>
 
 
 
 
 </body>
+
+
+
 </html>

@@ -23,16 +23,20 @@
 
 </head>
 
-
-
 <body>
+
+
 
 
 <header class="site-header">
 <h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
 
-<h2>
-1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
+
+
+
+
+
+<h2>1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
 
 <ul>
 <li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
@@ -41,11 +45,14 @@
 <li><a href="ramen.html">ラーメン</a></li>
 <li><a href="okonomiyaki.html">お好み焼き</a></li>
 </ul>
-
 <ul>
 <li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
 <li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+
 </ul>
+
+
+
 
 
 <!-- 投稿ボタン -->
@@ -72,6 +79,35 @@
 
 
 
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="all.html">全ジャンル</a>
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>
+  
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
 
 
 
@@ -79,56 +115,80 @@
 </header>
 
 
-<div>
+
+
+<div class="sort-buttons">
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+ <button onclick="filterHighScore()">4.0以上</button>
+</div>
+
+
+
+<hr>
+
+
+<div id="articles">
+
+
+<article>
 26/3/18（投稿日）TERUO＠teruo<br>
 美味かった。注文の機械のUIはよくない。ベーシックのノーマルな肉そばラーメンがどれかをわかりやすく表示した方がいい。
 あんまし良い表示の仕方ではないと思う。今度はベーシックを食べてみたい。ちなみに良い感じの店だった。また行くと思う。
 <br>
 ■味玉肉そば<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■丸源ラーメン 名東香流店<br>
 ■名古屋市<br>
 ■957円<br>
 ■Ate day：26/3/17<br>
 <img src="imagenagoya/0317.png" alt="ラーメンの画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
 
 
-<div>
+
+
+
+<article>
 26/3/3（投稿日）TERUO＠teruo<br>
 炒飯美味かった。後、ニラの辛いのが良かった。もう1回確かめに行くか。<br>
 ■チャーハンセット（ランチ）<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■うま屋ラーメン 名東本通店<br>
 ■名古屋市<br>
 ■1050円<br>
 ■Ate day：26/2/27<br>
 <img src="imagenagoya/umayachahun.png" alt="うまやの画像" width="200" height="220">
 <img src="imagenagoya/umaya.png" alt="うまやの画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
 
 
-<div>
+
+
+
+
+
+
+
+<article>
 26/2/18（投稿日）TERUO＠teruo<br>
 醬油ラーメンも麻婆飯も相当レベル高い。麻婆飯にはまる人がいるのもわかるぜ。<br>
 ■ラーメンセット（醬油ラーメン＋麻婆飯）<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：26/2/13<br>
 <img src="imagenagoya/soyramen.png" alt="醬油ラーメンの画像" width="200" height="220">
 <img src="imagenagoya/mabohan.png" alt="麻婆飯の画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
@@ -136,11 +196,11 @@
 
 
 
-<div>
+<article>
 26/2/15（投稿日）TERUO＠teruo<br>
 流石やな。また食べたい。これで千円はすごいな。しっかり美味い。<br>
 ■夜のラーメンセット（台湾ラーメン＋炒飯＋台湾酢豚）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■1000円<br>
@@ -148,218 +208,175 @@
 <img src="imagenagoya/taiwan0211.png" alt="台湾ラーメンの画像" width="200" height="220">
 <img src="imagenagoya/friedrice0211.png" alt="炒飯" width="200" height="220">
 <img src="imagenagoya/taiwansubuta.png" alt="台湾酢豚の画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
-<div>
+
+
+
+
+
+
+
+
+<article>
 26/2/3（投稿日）TERUO＠teruo<br>
 回鍋肉飯が美味すぎて、美味すぎて。<br>
 ■ラーメンセット（台湾ラーメン＋回鍋肉飯）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：26/2/2<br>
 <img src="imagenagoya/hoi.png" alt="回鍋肉の画像" width="200" height="220">
 <img src="imagenagoya/taiwan5.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
 
-<div>
+
+<article>
 26/1/31（投稿日）TERUO＠teruo<br>
 ここでええやん。台湾ラーメンがJR名古屋駅店より200円位安いし。て思った。<br>
 ■台湾ラーメン<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■味仙 名古屋駅店（柳橋）<br>
 ■名古屋市<br>
 ■770円<br>
 ■Ate day：26/1/30<br>
 <img src="imagenagoya/misen.png" alt="味仙台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-</div>
-
-<hr>
+</article>
 
 
 
-<div>
+<article>
 26/1/30（投稿日）TERUO＠teruo<br>
 また食べたい。<br>
 ■肉入りラーメン<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■スガキヤ（イオンモールナゴヤドーム前店）<br>
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：26/1/20<br>
 <img src="imagenagoya/sugakiya4.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
-</div>
-
-<hr>
+</article>
 
 
-<div>
+
+
+
+<article>
 26/1/30（投稿日）TERUO＠teruo<br>
 また食べたい。<br>
 ■ラーメンセット（台湾ラーメン＋炒飯）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：26/1/14<br>
 <img src="imagenagoya/friedrice3.png" alt="炒飯の画像" width="200" height="220">
 <img src="imagenagoya/taiwan4.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-</div>
-<hr>
+</article>
 
 
 
 
-<div>
+
+
+
+<article>
 26/1/1（投稿日）TERUO＠teruo<br>
 最初にスープを飲んだ時、爆発力がある。
 なんというか優しい味で最高。<br>
 ■肉入りラーメン（×まず最初にスプーンでスープを何口か飲んでから始まる。）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■スガキヤ（イオンモールナゴヤドーム前店）<br>
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：26/1/1<br>
 <img src="imagenagoya/sugakiya3.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
 
-</div>
-
-
-
-<hr>
+</article>
 
 
 
 
-<div>
+
+
+<article>
 25/12/31（投稿日）TERUO＠teruo<br>
 うめぇんだよな。この安心感よ。<br>
 ■肉入りラーメン<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■スガキヤ（名古屋エスカ）<br>
 ■名古屋市<br>
 ■590円<br>
 ■Ate day：25/12/30<br>
 <img src="imagenagoya/sugakiya2.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
-
-</div>
-
-
-<hr>
+</article>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（投稿日）TERUO＠teruo<br>
 相当レベル高い。<br>
 ■ラーメンセット（豚骨ラーメン＋天津飯）<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：25/12/27<br>
 <img src="imagenagoya/tonkotsu.png" alt="豚骨ラーメンの画像" width="200" height="220">
 <img src="imagenagoya/tenshinhan.png" alt="天津飯の画像" width="200" height="220">（自分が撮った写真）
-
-</div>
-
-<hr>
+</article>
 
 
 
-
-
-
-
-
-<div>
+<article>
 25/12/29（投稿日）TERUO＠teruo<br>
 4.0やな。<br>
 ■ラーメンセット（台湾ラーメン＋炒飯）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：25/12/26<br>
 <img src="imagenagoya/friedrice2.png" alt="炒飯の画像" width="200" height="220">
 <img src="imagenagoya/taiwan3.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-
-</div>
-
-<hr>
+</article>
 
 
 
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（投稿日）TERUO＠teruo<br>
 結局、また食べたい。<br>
 ■ラーメンセット（台湾ラーメン＋炒飯）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：25/12/22<br>
 <img src="imagenagoya/friedrice.png" alt="炒飯の画像" width="200" height="220">
 <img src="imagenagoya/taiwan2.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-
-</div>
-
-<hr>
+</article>
 
 
 
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/5（投稿日）TERUO＠teruo<br>
 うまい。<br>
 ■台湾ラーメン<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■四川楼<br>
 ■名古屋市<br>
 ■600円<br>
 ■Ate day：25/12/5<br>
 <img src="imagenagoya/taiwan.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
-
-</div>
-
-<hr>
+</article>
 
 
 
@@ -367,25 +384,22 @@
 
 
 
-
-
-
-
-
-<div>
+<article>
 25/12/1（投稿日）TERUO＠teruo<br>
-クソ美味い！！
-ほんまに好きやわ！！まじでうまい。幸せを呼ぶ。<br>
-スープバケモンやな。肉入りラーメン530円でもう幸せ。
+クソ美味い！！  
+ほんまに好きやわ！！まじでうまい。幸せを呼ぶ。  
+スープバケモンやな。肉入りラーメン530円でもう幸せ。  
 うまいなおい。<br>
 
 ■【最高の一杯】肉入りラーメン（×まず最初はスープを5口位、付いてるスプーンで飲んでから始まる。）<br>
-⇒★★★★⋆ 4.5<br>
+⇒★★★★⋆ <span class="score" data-score="4.5">4.5</span><br>
 ■スガキヤ（イオンモールナゴヤドーム前店）<br>
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：25/12/1<br>
 <img src="imagenagoya/sugakiya.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
+</article>
+
 
 </div>
 
@@ -396,6 +410,59 @@
 
 
 
+<footer class="site-footer">
+  <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+  </ul>
+
+
+<ul>
+
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="yakiniku.html">焼肉</a></li>
+<li><a href="friedrice.html">炒飯</a></li>
+<li><a href="tenshinhan.html">天津飯</a></li>
+</ul>
+
+<ul>
+
+<li><a href="chiken.html">チキン</a></li>
+<li><a href="doria.html">ドリア</a></li>
+<li><a href="yakisoba.html">焼きそば</a></li>
+<li><a href="pasta.html">パスタ</a></li>
+<li><a href="hoikoro.html">回鍋肉</a></li>
+<li><a href="taiwansubuta.html">台湾酢豚</a></li>
+<li><a href="karaage.html">唐揚げ</a></li>
+</ul>
+
+<ul>
+<li><a href="tebasaki.html">手羽先</a></li>
+<li><a href="pizza.html">ピザ</a></li>
+<li><a href="JagaButter.html">じゃがバター</a></li>
+<li><a href="mabo.html">麻婆</a></li>
+<li><a href="hamburg.html">ハンバーグ</a></li>
+<li><a href="yoshio.html">YOSHIO</a></li>
+<li><a href="iefriedrice.html">炒飯（家飯）</a></li>
+</ul>
+
+<ul>
+<li><a href="aburasoba.html">油そば</a></li>
+<li><a href="soup.html">スープ</a></li>
+<li><a href="iepod.html">鍋（家飯）</a></li>
+<li><a href="cook.html">家飯</a></li>
+<li><a href="nabe.html">鍋の素_比較</a></li>
+<li><a href="nabediary.html">鍋_研究日記</a></li>
+</ul>
 
 
 
@@ -404,11 +471,128 @@
 
 
 
+</footer>
+
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
+
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
+
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
+
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
+
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
+
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
+
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
+
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
+
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("img").forEach(img => {
+    img.loading = "lazy";
+  });
+});
+</script>
 
 
 
 
 </body>
+
+
 </html>
