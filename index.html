@@ -1008,42 +1008,31 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 </footer>
 
-
 <script>
-
-function parseDate(text) {
-  const match = text.match(/\d{2}\/\d{1,2}\/\d{1,2}/);
-  if (!match) return new Date(0);
-
-  const parts = match[0].split("/");
-  const year = 2000 + parseInt(parts[0]);
-  const month = parseInt(parts[1]) - 1;
-  const day = parseInt(parts[2]);
-
-  return new Date(year, month, day);
-}
-
-
-
-
 function sortByDate() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
 
   articles.sort((a, b) => {
-    const dA = parseDate(a.innerText);
-    const dB = parseDate(b.innerText);
+    const textA = a.innerText;
+    const textB = b.innerText;
 
-    return dB - dA; // 新しい順
+    const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+    const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
+
+    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
+    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
+
+    return dB - dA;
   });
 
   articles.forEach(article => container.appendChild(article));
 }
 
+</script>
 
 
-
-
+<script>
 function sortByScore() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
@@ -1071,9 +1060,10 @@ function sortByScore() {
 
   articles.forEach(article => container.appendChild(article));
 }
+</script>
 
 
-
+<script>
 function sortByScoreLow() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
@@ -1101,32 +1091,29 @@ function sortByScoreLow() {
 
   articles.forEach(article => container.appendChild(article));
 }
+</script>
 
 
+
+
+
+<script>
 function filterHighScore() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
 
-  // ① 4.0以上だけ抽出
-  const filtered = articles.filter(article => {
-    const score = parseFloat(article.querySelector(".score").dataset.score);
-    return score >= 4.0;
-  });
-
-  // ② スコア → 投稿日の順でソート
-  filtered.sort((a, b) => {
+  articles.sort((a, b) => {
     const scoreA = parseFloat(a.querySelector(".score").dataset.score);
     const scoreB = parseFloat(b.querySelector(".score").dataset.score);
 
-    // ① まずスコアで並び替え（高い順）
     if (scoreB !== scoreA) {
       return scoreB - scoreA;
     }
 
-    // ② 同じスコアなら投稿日で並び替え（新しい順）
     const textA = a.innerText;
     const textB = b.innerText;
 
+    // 投稿日を取得
     const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
     const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
 
@@ -1136,24 +1123,10 @@ function filterHighScore() {
     return dB - dA;
   });
 
-  // ③ 一旦全部非表示
-  articles.forEach(article => article.style.display = "none");
-
-  // ④ フィルタされたものだけ表示＋順番通りに並べる
-  filtered.forEach(article => {
-    article.style.display = "block";
-    container.appendChild(article);
-  });
+  articles.forEach(article => container.appendChild(article));
 }
 
-
-
-
-
-
 </script>
-
-
 
 
 
