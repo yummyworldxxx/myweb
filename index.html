@@ -1011,27 +1011,34 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 <script>
 
+function parseDate(text) {
+  const match = text.match(/\d{2}\/\d{1,2}\/\d{1,2}/);
+  if (!match) return new Date(0);
+
+  const parts = match[0].split("/");
+  const year = 2000 + parseInt(parts[0]);
+  const month = parseInt(parts[1]) - 1;
+  const day = parseInt(parts[2]);
+
+  return new Date(year, month, day);
+}
+
+
+
+
 function sortByDate() {
   const container = document.getElementById("articles");
   const articles = Array.from(container.querySelectorAll("article"));
 
   articles.sort((a, b) => {
-    const textA = a.innerText;
-    const textB = b.innerText;
+    const dA = parseDate(a.innerText);
+    const dB = parseDate(b.innerText);
 
-    const dateA = textA.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
-    const dateB = textB.match(/\d{2}\/\d{1,2}\/\d{1,2}/)[0];
-
-    const dA = new Date(`20${dateA.replace(/\//g, '-')}`);
-    const dB = new Date(`20${dateB.replace(/\//g, '-')}`);
-
-    return dB - dA;
+    return dB - dA; // 新しい順
   });
 
   articles.forEach(article => container.appendChild(article));
 }
-
-
 
 
 
