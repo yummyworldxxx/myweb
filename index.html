@@ -123,6 +123,10 @@ function toggleMenu() {
 
 
 
+
+
+
+
 </header>
 
 
@@ -134,6 +138,40 @@ function toggleMenu() {
  <button onclick="sortByScoreLow()">評価（低い順）</button>
  <button onclick="filterHighScore()">4.0以上</button>
 </div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  <button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0（0件）</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0（0件）</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
 
 
 
@@ -1265,6 +1303,39 @@ function sortByDate() {
   articles.sort((a, b) => getDate(b) - getDate(a));
 
   articles.forEach(a => container.appendChild(a));
+}
+</script>
+
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  });
 }
 </script>
 
