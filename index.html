@@ -144,8 +144,12 @@ function toggleMenu() {
 <div style="position:relative; display:inline-block;">
 
   <!-- ボタン -->
-  <button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+  
 
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
   <!-- リスト -->
   <div id="scoreMenu" style="
     display:none;
@@ -160,8 +164,8 @@ function toggleMenu() {
     <div onclick="filterByScoreExact(4.0)">★4.0</div>
     <div onclick="filterByScoreExact(3.5)">★3.5</div>
     <div onclick="filterByScoreExact(3.0)">★3.0</div>
-    <div onclick="filterByScoreExact(2.0)">★2.0（0件）</div>
-    <div onclick="filterByScoreExact(1.0)">★1.0（0件）</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
 
     <hr>
     <div onclick="resetAll()">全表示</div>
