@@ -1,3 +1,5 @@
+<img src="yummy.jpeg" width="800">
+
 # 🚀 Yummy — A Food Rating System That Actually Means Something
 
 Yummy is not just a food review project.  
