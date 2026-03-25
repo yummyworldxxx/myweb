@@ -123,13 +123,15 @@ function toggleMenu() {
 
 
 
-
 <div class="sort-buttons">
- <button onclick="sortByDate()">新着順</button>
- <button onclick="sortByScore()">評価（高い順）</button>
- <button onclick="sortByScoreLow()">評価（低い順）</button>
- <button onclick="filterHighScore()">4.0以上</button>
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+ <button onclick="filterHighScore()">4.0+</button>
 </div>
+
+
+
 
 
 
@@ -138,8 +140,8 @@ function toggleMenu() {
   <!-- ボタン -->
   
 
-<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
  
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
 
   
   <!-- リスト -->
@@ -160,7 +162,7 @@ function toggleMenu() {
     <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
 
     <hr>
-    <div onclick="resetAll()">全表示</div>
+    <div onclick="resetAll()">All</div>
   </div>
 
 </div>
