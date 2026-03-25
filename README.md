@@ -16,9 +16,7 @@ Ratings are strictly defined:
 2.0 = Not good
 3.0 = Normal
 3.5 = Pretty good
-
---- The Wall — 4.0 ---
-
+🚧 The Wall — 4.0
 4.0 = I want to eat this again
 4.5 = I will definitely eat this again
 5.0 = God
