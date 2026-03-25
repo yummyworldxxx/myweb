@@ -1,108 +1,86 @@
-# 🚀 Welcome to Cosmos Project "Yummy" 🚀
+🚀 Yummy — A Food Rating System That Actually Means Something
 
-**Yummy** is a real-food review project.  
-It is a long-term food data asset built on a single absolute principle:
+Yummy is not just a food review project.
+It is an attempt to restore meaning to ratings.
 
-**4.0 must be rare.**
+Because today, everything is rated 4.0.
 
-If everything is 4.0, 4.0 has no value.
+And when everything is 4.0,
+4.0 means nothing.
 
----
+🧱 The 4.0 Rule
 
-## 🧱 The 4.0 Rule
+Ratings are strictly defined:
 
-Ratings are defined as:
+1.0 = Bad
+2.0 = Not good
+3.0 = Normal
+3.5 = Pretty good
 
-- 1.0 = Bad
-- 2.0 = Not good
-- 3.0 = Normal
-- 3.5 = Pretty good
+--- The Wall — 4.0 ---
 
-**--- High Wall — the 4.0 threshold ---**
+4.0 = I want to eat this again
+4.5 = I will definitely eat this again
+5.0 = God
 
-- 4.0 = I want to eat this again
-- 4.5 = I will definitely eat this again
-- 5.0 = God
+4.0 is not “pretty good.”
+4.0 is desire.
 
-> 4.0 is not “pretty good.”  
->  4.0 is desire.
+🍜 What This Project Does
+Records real meals over time
+Compares the same restaurant on different days
+Includes price and context
+Uses only self-taken photos
+Prioritizes reality over popularity
+🧠 Why This Exists
 
----
+Food is inconsistent.
 
-## 🍜 About This Project
+Even at the same restaurant,
+the taste changes depending on:
 
-- Real meals recorded over time
-- Same restaurant, different days, compared
-- Prices included
-- All photos taken by the eater
-- Evaluation logic = Reality > Popularity
+the day
+the cook
+the temperature
+the condition
 
-**Started:** May 18, 2025
+Yet most review platforms ignore this.
 
-Built with only HTML, CSS, JavaScript, and Google App Script — and obsession.
+Yummy does not.
 
----
+🌏 Live Website
+🇯🇵 Japanese: https://yummyworldxxx.github.io/myweb/
+🇬🇧 English: https://yummyworldxxx.github.io/myweb/indexe.html
+🔬 Long-Term Vision
 
-## 🌏 Live Website
+To build a global food data asset
+where ratings actually reflect reality.
 
-- 🇯🇵 Japanese: [Yummy Japanese](https://yummyworldxxx.github.io/myweb/)
-- 🇬🇧 English: [Yummy English](https://yummyworldxxx.github.io/myweb/indexe.html)
+No inflated scores
+No meaningless averages
+No fake consensus
 
----
+Only data. Only desire.
 
-## 🧠 Philosophy
-
-Food is data.
-
-Even at the same chain restaurant,  
-results vary depending on the day,  
-temperature retention, and how it’s prepared.
-
-- Consistency should be tested.
-- Emotion should be recorded.
-- Desire should be measured.
-
----
-
-## 🔬 Long-Term Vision
-
-To create a transparent global food data asset  
-where ratings actually mean something.
-
-- An open evaluation system
-- A resistance against inflated scoring culture
-
----
-
-## 🤝 Why Clone?
+🤝 Why Clone?
 
 If you care about:
 
-- Rating system design
-- Structured review logic
-- Long-term data projects
-- Independent web building
-- Philosophy-driven software
+Rating system design
+Data integrity
+Independent web development
+Philosophy-driven software
 
-Clone it.  
-Fork it.  
-Improve it.
+Clone it.
+Fork it.
+Break the system.
 
-Break the 4.0 wall.
+⭐ Support
+Star the repository
+Fork the project
+Build your own dataset
 
----
+👉 https://github.com/yummyworldxxx/myweb
 
-## ⭐ Support
-
-If this idea resonates with you:
-
-- Star the repository
-- Fork the project
-- Build your own food data asset
-
-👉 [GitHub Repository](https://github.com/yummyworldxxx/myweb)
-
----
-
-> — TERUO  
-> Founder of Yummy
+TERUO
+Founder of Yummy
