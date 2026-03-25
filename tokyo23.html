@@ -48,6 +48,7 @@
 </ul>
 <ul>
 <li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
+
 <li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
 
 <li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
@@ -90,6 +91,7 @@
   <a href="vision.html">Vision</a>
   <a href="story.html">Story</a>
   <a href="contact.html">Contact</a>
+  <a href="premium.html">Premium Comment</a>
   
 </div>
 
@@ -115,6 +117,10 @@ function toggleMenu() {
 
 
 
+
+
+
+
 </header>
 
 
@@ -129,11 +135,48 @@ function toggleMenu() {
 
 
 
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
 <hr>
 
 
 <div id="articles">
-
 
 
 
@@ -148,6 +191,9 @@ function toggleMenu() {
 ■Ate day：26/3/25<br>
 <img src="imagetokyo23/tanmen.jpeg" alt="たんめんの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
+
+
 
 
 
@@ -174,6 +220,14 @@ function toggleMenu() {
 
 
 
+
+
+
+
+
+
+
+
 <article>
 26/1/30（投稿日）YOSHIO＠yoshio<br>
 NYスタイルの切り分けピザ。大型のガスオーブンで本場感あり。焼成は約350℃。手のひらより大きい1/8が2枚でボリュームは満足、
@@ -185,8 +239,14 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 ■東京都台東区<br>
 ■総額1600円<br>
 ■Ate day：26/1/23<br>
-<img src="imagetokyo23/pizza2.png" alt="ピザの画像" width="200" height="220">
+<img src="imagetokyo23/pizza2.png" alt="ピザの画像" width="200" height="220" loading="lazy">
 </article>
+
+
+
+
+
+
 
 
 <article>
@@ -199,13 +259,23 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 ■〒153-0042 東京都目黒区青葉台１丁目１４−１７<br>
 ■3000円<br>
 ■Ate day：25/11/2<br>
-<img src="imagetokyo23/pizza.png" alt="ピザの画像" width="200" height="220">
-<img src="imagetokyo23/pizzastore.png" alt="ピザ店の画像" width="200" height="220">（自分が撮った写真）
+<img src="imagetokyo23/pizza.png" alt="ピザの画像" width="200" height="220" loading="lazy">
+<img src="imagetokyo23/pizzastore.png" alt="ピザ店の画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
 
+
+
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -278,11 +348,6 @@ NYスタイルの切り分けピザ。大型のガスオーブンで本場感あ
 
 
 </footer>
-
-
-
-
-
 
 <script>
 /* -------------------------
@@ -391,20 +456,46 @@ function sortByDate() {
 }
 </script>
 
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("img").forEach(img => {
-    img.loading = "lazy";
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
   });
-});
+}
 </script>
 
 
 
 
-</body>
 
+
+
+</body>
 
 
 </html>

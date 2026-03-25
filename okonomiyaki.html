@@ -49,6 +49,7 @@
 </ul>
 <ul>
 <li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
+
 <li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
 
 <li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
@@ -91,6 +92,7 @@
   <a href="vision.html">Vision</a>
   <a href="story.html">Story</a>
   <a href="contact.html">Contact</a>
+  <a href="premium.html">Premium Comment</a>
   
 </div>
 
@@ -116,6 +118,10 @@ function toggleMenu() {
 
 
 
+
+
+
+
 </header>
 
 
@@ -130,11 +136,48 @@ function toggleMenu() {
 
 
 
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
 <hr>
 
 
 <div id="articles">
-
 
 
 
@@ -158,16 +201,20 @@ function toggleMenu() {
 ■名古屋市<br>
 ■4350円（デラックスお好み焼き；1200円×2枚=2400円）<br>
 ■Ate day：26/1/3<br>
-<img src="imagenagoya/okonomiyaki.png" alt="お好み焼きの画像" width="200" height="220">
-<img src="imagenagoya/zyagabata.png" alt="じゃがバターの画像" width="200" height="220">
-<img src="imagenagoya/yakisoba.png" alt="焼きそばの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/okonomiyaki.png" alt="お好み焼きの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/zyagabata.png" alt="じゃがバターの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/yakisoba.png" alt="焼きそばの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
 
 
-
 </div>
+
+
+
+
+
 
 
 
@@ -239,9 +286,6 @@ function toggleMenu() {
 
 
 </footer>
-
-
-
 
 <script>
 /* -------------------------
@@ -350,18 +394,46 @@ function sortByDate() {
 }
 </script>
 
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("img").forEach(img => {
-    img.loading = "lazy";
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
   });
-});
+}
 </script>
 
 
 
 
+
+
+
 </body>
+
 
 </html>

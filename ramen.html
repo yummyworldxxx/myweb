@@ -47,6 +47,7 @@
 </ul>
 <ul>
 <li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
+
 <li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
 
 <li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
@@ -89,6 +90,7 @@
   <a href="vision.html">Vision</a>
   <a href="story.html">Story</a>
   <a href="contact.html">Contact</a>
+  <a href="premium.html">Premium Comment</a>
   
 </div>
 
@@ -114,6 +116,10 @@ function toggleMenu() {
 
 
 
+
+
+
+
 </header>
 
 
@@ -125,6 +131,44 @@ function toggleMenu() {
  <button onclick="sortByScoreLow()">評価（低い順）</button>
  <button onclick="filterHighScore()">4.0以上</button>
 </div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
 
 
 
@@ -153,6 +197,10 @@ function toggleMenu() {
 
 
 
+
+
+
+
 <article>
 26/3/24（投稿日）TERUO＠teruo<br>
 相当美味い。回鍋飯うまいな。<br>
@@ -165,6 +213,14 @@ function toggleMenu() {
 <img src="imagenagoya/hoi0324.jpeg" alt="回鍋肉の画像" width="200" height="220" loading="lazy">
 <img src="imagenagoya/taiwan0324.jpeg" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
+
+
+
+
+
+
+
 
 
 
@@ -182,6 +238,8 @@ function toggleMenu() {
 </article>
 
 
+
+
 <article>
 26/3/22（投稿日）FUMIYA@fumiya<br>
 ドドドド濃厚にぼしにノックアウト
@@ -194,6 +252,7 @@ function toggleMenu() {
 ■Ate day：26/3/22<br>
 <img src="imagetokyo23/niboshi.jpeg" alt="ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
 
 
 
@@ -214,6 +273,11 @@ function toggleMenu() {
 
 
 
+
+
+
+
+
 <article>
 26/3/18（投稿日）TERUO＠teruo<br>
 美味かった。注文の機械のUIはよくない。ベーシックのノーマルな肉そばラーメンがどれかをわかりやすく表示した方がいい。
@@ -225,8 +289,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■957円<br>
 ■Ate day：26/3/17<br>
-<img src="imagenagoya/0317.png" alt="ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/0317.png" alt="ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
 
 
 
@@ -244,15 +309,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■1050円<br>
 ■Ate day：26/2/27<br>
-<img src="imagenagoya/umayachahun.png" alt="うまやの画像" width="200" height="220">
-<img src="imagenagoya/umaya.png" alt="うまやの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/umayachahun.png" alt="うまやの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/umaya.png" alt="うまやの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
-
-
-
-
-
-
 
 
 
@@ -268,12 +327,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：26/2/13<br>
-<img src="imagenagoya/soyramen.png" alt="醬油ラーメンの画像" width="200" height="220">
-<img src="imagenagoya/mabohan.png" alt="麻婆飯の画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/soyramen.png" alt="醬油ラーメンの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/mabohan.png" alt="麻婆飯の画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
-
-
-
 
 
 
@@ -287,9 +343,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■1000円<br>
 ■Ate day：26/2/11<br>
-<img src="imagenagoya/taiwan0211.png" alt="台湾ラーメンの画像" width="200" height="220">
-<img src="imagenagoya/friedrice0211.png" alt="炒飯" width="200" height="220">
-<img src="imagenagoya/taiwansubuta.png" alt="台湾酢豚の画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/taiwan0211.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/friedrice0211.png" alt="炒飯" width="200" height="220" loading="lazy">
+<img src="imagenagoya/taiwansubuta.png" alt="台湾酢豚の画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
@@ -311,9 +367,10 @@ function toggleMenu() {
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：26/2/2<br>
-<img src="imagenagoya/hoi.png" alt="回鍋肉の画像" width="200" height="220">
-<img src="imagenagoya/taiwan5.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/hoi.png" alt="回鍋肉の画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/taiwan5.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
 
 
 
@@ -328,7 +385,7 @@ function toggleMenu() {
 ■名古屋市<br>
 ■770円<br>
 ■Ate day：26/1/30<br>
-<img src="imagenagoya/misen.png" alt="味仙台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/misen.png" alt="味仙台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
@@ -342,9 +399,8 @@ function toggleMenu() {
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：26/1/20<br>
-<img src="imagenagoya/sugakiya4.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/sugakiya4.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
-
 
 
 
@@ -358,9 +414,13 @@ function toggleMenu() {
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：26/1/14<br>
-<img src="imagenagoya/friedrice3.png" alt="炒飯の画像" width="200" height="220">
-<img src="imagenagoya/taiwan4.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/friedrice3.png" alt="炒飯の画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/taiwan4.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
+
+
+
 
 
 
@@ -378,11 +438,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：26/1/1<br>
-<img src="imagenagoya/sugakiya3.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/sugakiya3.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 
 </article>
-
-
 
 
 
@@ -396,8 +454,9 @@ function toggleMenu() {
 ■名古屋市<br>
 ■590円<br>
 ■Ate day：25/12/30<br>
-<img src="imagenagoya/sugakiya2.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/sugakiya2.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
+
 
 
 
@@ -412,8 +471,8 @@ function toggleMenu() {
 ■名古屋市<br>
 ■780円<br>
 ■Ate day：25/12/27<br>
-<img src="imagenagoya/tonkotsu.png" alt="豚骨ラーメンの画像" width="200" height="220">
-<img src="imagenagoya/tenshinhan.png" alt="天津飯の画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/tonkotsu.png" alt="豚骨ラーメンの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/tenshinhan.png" alt="天津飯の画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
@@ -427,8 +486,8 @@ function toggleMenu() {
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：25/12/26<br>
-<img src="imagenagoya/friedrice2.png" alt="炒飯の画像" width="200" height="220">
-<img src="imagenagoya/taiwan3.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/friedrice2.png" alt="炒飯の画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/taiwan3.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
@@ -442,8 +501,8 @@ function toggleMenu() {
 ■名古屋市<br>
 ■750円<br>
 ■Ate day：25/12/22<br>
-<img src="imagenagoya/friedrice.png" alt="炒飯の画像" width="200" height="220">
-<img src="imagenagoya/taiwan2.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/friedrice.png" alt="炒飯の画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/taiwan2.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
@@ -457,10 +516,8 @@ function toggleMenu() {
 ■名古屋市<br>
 ■600円<br>
 ■Ate day：25/12/5<br>
-<img src="imagenagoya/taiwan.png" alt="台湾ラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/taiwan.png" alt="台湾ラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
-
-
 
 
 
@@ -479,11 +536,13 @@ function toggleMenu() {
 ■名古屋市<br>
 ■530円<br>
 ■Ate day：25/12/1<br>
-<img src="imagenagoya/sugakiya.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220">（自分が撮った写真）
+<img src="imagenagoya/sugakiya.png" alt="スガキヤ肉入りラーメンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
 </div>
+
+
 
 
 
@@ -558,11 +617,6 @@ function toggleMenu() {
 
 
 </footer>
-
-
-
-
-
 
 <script>
 /* -------------------------
@@ -671,19 +725,45 @@ function sortByDate() {
 }
 </script>
 
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("img").forEach(img => {
-    img.loading = "lazy";
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
   });
-});
+}
 </script>
 
 
 
 
-</body>
 
+
+
+</body>
 
 </html>
