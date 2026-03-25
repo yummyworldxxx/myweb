@@ -91,7 +91,9 @@ body {
 .site-header ul {
   list-style: none;
   display: flex;
-  gap:7px;  
+  gap:4px;  
+  margin: 0;
+  padding: 1px 7px;
 } 
 
 .site-header a {
@@ -122,7 +124,7 @@ body {
 
 
 .site-header h1 {
-  font-size: 38px; 
+  font-size: 36px; 
 }
 
 .site-header h2 {
@@ -138,7 +140,7 @@ body {
 
 
 .logo {
-  width: 30px;   /* ←ここ小さくする */
+  width: 23px;   /* ←ここ小さくする */
      /* 縦横比そのまま */
 }
 
@@ -223,7 +225,7 @@ body {
 
   /* ナビの文字 */
   .site-header ul li a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
 
