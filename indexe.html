@@ -121,6 +121,60 @@ function toggleMenu() {
 
 </header>
 
+
+
+
+<div class="sort-buttons">
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+ <button onclick="filterHighScore()">4.0以上</button>
+</div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
 <article>
 26/3/25（Posted）KURAKATSU@kurakatsu<br>
 Depending on the day, the Chinese cabbage from different regions is sweet and goes perfectly with the tanmen. Adding the homemade chili oil makes it even better! It’s quite spicy, so be careful not to add too much. If you like cilantro, the cilantro topping is also recommended!<br>
@@ -133,8 +187,6 @@ Depending on the day, the Chinese cabbage from different regions is sweet and go
 <img src="imagetokyo23/tanmen.jpeg" alt="Image of tanmen" width="200" height="220" loading="lazy">（Photo taken by myself）
 </article>
 
-
-
 <article>
 26/3/24（Posted）TERUO＠teruo<br>
 Pretty good taste<br>
@@ -146,8 +198,6 @@ Pretty good taste<br>
 ■Ate day：26/3/24<br>
 <img src="imagenagoya/popcorn0324.jpeg" alt="Image of popcorn shrimp" width="200" height="220" loading="lazy">（Photo taken by myself）
 </article>
-
-
 
 <article>
 26/3/24（Post date）TERUO＠teruo<br>
@@ -162,8 +212,6 @@ Very good. The twice-cooked pork rice is yummy.<br>
 <img src="imagenagoya/taiwan0324.jpeg" alt="Image of Taiwan ramen" width="200" height="220" loading="lazy">（Photo taken by myself）
 </article>
 
-
-
 <article>
 26/3/24（Posted）TERUO＠teruo<br>
 The dressing is nice. It was good.<br>
@@ -175,8 +223,6 @@ The dressing is nice. It was good.<br>
 ■Ate day：26/3/23<br>
 <img src="imagenagoya/popcorn0323.jpeg" alt="Chicken image" width="200" height="220">
 </article>
-
-
 
 <article>
 26/3/24 (Posted) TERUO＠teruo<br>
@@ -190,7 +236,6 @@ I want to eat it again. If it were cooked a bit more, it would be on the higher 
 <img src="imagenagoya/diavoro0323.jpeg" alt="chicken image" width="200" height="220">
 </article>
 
-
 <article>
 26/3/24 (Posted) TERUO＠teruo<br>
 Yummy. Consistently good.<br>
@@ -203,7 +248,6 @@ Yummy. Consistently good.<br>
 <img src="imagenagoya/chiken0323.jpeg" alt="Chicken image" width="200" height="220" loading="lazy"> (Photo taken by myself)
 </article>
 
-
 <article>
 26/3/23 (Posted) TERUO＠teruo<br>
 Pretty good<br>
@@ -215,9 +259,6 @@ Pretty good<br>
 ■Ate day: 26/3/22<br>
 <img src="imagenagoya/pop.jpeg" alt="Image of popcorn shrimp" width="200" height="220" loading="lazy"> (Photo taken by myself)
 </article>
-
-
-
 
 <article>
 26/3/23 (Posted) TERUO＠teruo<br>
@@ -232,8 +273,6 @@ Right after eating, I’d rate it 3.5. But in the end, I find myself wanting to 
 <img src="imagenagoya/taiwan0322.jpeg" alt="Taiwan ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself)
 </article>
 
-
-
 <article>
 26/3/22 (Posted) FUMIYA@fumiya<br>
 Knocked out by insanely rich dried sardine flavor
@@ -246,7 +285,6 @@ Knocked out by insanely rich dried sardine flavor
 ■Ate day: 26/3/22<br>
 <img src="imagetokyo23/niboshi.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by me)
 </article>
-
 
 <article>
 26/3/22 (Posted) FUMIYA@fumiya<br>
@@ -261,426 +299,322 @@ Nagahama ramen. The noodles were firm and snappy—this was the ultimate tonkots
 <img src="imagefukuoka/nagahama.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself)
 </article>
 
-
-
-<div>
+<article>
 26/3/18 (Posted) TERUO＠teruo<br>
 It was good. The ordering machine UI is not good. It would be better if the basic, standard meat soba ramen were displayed more clearly so you can easily understand which one it is.
 I don’t think it’s a very good way of displaying it. Next time I want to try the basic one. By the way, it was a nice place. I’ll probably go again.
 <br>
 ■Ajitama Meat Soba<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Marugen Ramen Meito Kanare Branch<br>
 ■Nagoya City<br>
 ■957 yen<br>
 ■Ate day: 26/3/17<br>
 <img src="imagenagoya/0317.png" alt="Ramen image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
 
 
 
-
-
-
-<div>
+<article>
 26/3/18（Posted）TERUO＠teruo<br>
 Not that good today.<br>
 ■Fried Rice<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■500 yen<br>
 ■Ate day: 26/3/15<br>
 <img src="imagenagoya/0315.png" alt="Fried rice image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-
-
-<div>
+<article>
 26/3/14 (Posted) TERUO＠teruo<br>
 The fried rice here is at a very high level. Yummy.<br>
 ■Fried Rice<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenro<br>
 ■Nagoya City<br>
 ■500 yen<br>
 ■Ate day: 26/3/8<br>
 <img src="imagenagoya/0308.png" alt="Image of fried rice" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/11 (Posted) TERUO＠teruo<br>
 The peperoncino at Dome-mae is yummy. I want to eat it again.<br>
 ■Peperoncino<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day: 26/3/6<br>
 <img src="imagenagoya/pepe0306.png" alt="Image of peperoncino" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/3/11 (Posted) TERUO＠teruo<br>
 Yummy.<br>
 ■Spicy Chicken<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day：26/3/6<br>
 <img src="imagenagoya/chiken0306.png" alt="Photo of the chicken" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/10 (Posted) TERUO＠teruo<br>
 Yummy.<br>
 ■Spicy Chicken<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Motoyama Station Front Store<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day: 26/3/5<br>
 <img src="imagenagoya/chiken0305.png" alt="Photo of the chicken" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-
-
-<div>
+<article>
 26/3/10 (Posted) TERUO＠teruo<br>
 Good feeling.<br>
 ■Cod roe and popcorn shrimp doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Motoyama Station Front Store<br>
 ■Nagoya City<br>
 ■400 yen<br>
 ■Ate day: 26/3/5<br>
 <img src="imagenagoya/doria0305.png" alt="Photo of doria" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/9 (Posted) TERUO＠teruo<br>
 High level. If I keep eating it, it might become a 4.0.<br>
 ■Zuppa with Onion<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day: 26/3/4<br>
 <img src="imagenagoya/zupa0304.png" alt="Image of Onion Zuppa" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/3/9（Posted）TERUO＠teruo<br>
 Not that tasty.<br>
 ■Soft Chicken with Melted Cheese × Rice<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome Mae<br>
 ■Nagoya City<br>
 ■650 yen<br>
 ■Ate day：26/3/4<br>
 <img src="imagenagoya/yawaraka0304.png" alt="Photo of soft chicken" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/9（Posted）TERUO＠teruo<br>
 As expected. Yummy.<br>
 ■Spicy Chicken<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day：26/3/4<br>
 <img src="imagenagoya/chiken0304.png" alt="Chicken image" width="200" height="220">（Photo taken by me）
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/3/7 (Posted) TERUO＠teruo<br>
 Uumm. Not that good.<br>
 ■Beef Hamburger Steak Lunch (Mustard Steak Sauce)<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■Cocos (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■1,089 yen<br>
 ■Ate day: 26/3/3<br>
 <img src="imagenagoya/burg2.png" alt="Photo of the hamburger" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/3/6（Post date）TERUO＠teruo<br>
 Want to eat it again. I don't even know how many times I've been to this place. I've never found a better abura soba than here. By the way, even though the name is Tokyo Abura Soba, it only exists in Nagoya. The price has gone up a lot compared to before. But it still reaches the level where I want to eat it again. Maybe the large size is actually tastier than the double portion. Probably because it becomes the right amount. Maybe I'll go with the large next time.<br>
 ■Abura Soba (Double Portion)<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Tokyo Abura Soba Honpo Nagoya Main Store<br>
 ■Nagoya City<br>
 ■1000 yen<br>
 ■Ate day：26/3/1<br>
 <img src="imagenagoya/abura.png" alt="Image of abura soba" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/3（Posted）TERUO＠teruo<br>
 The fried rice was good. Also, the spicy garlic chives were good. I might go back once more to check.<br>
 ■Fried Rice Set (Lunch)<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Umaya Ramen Meito Hondori Branch<br>
 ■Nagoya City<br>
 ■1050 yen<br>
 ■Ate day：26/2/27<br>
 <img src="imagenagoya/umayachahun.png" alt="Umaya image" width="200" height="220">  
 <img src="imagenagoya/umaya.png" alt="Umaya image" width="200" height="220">（Photo I took）
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/3（Posted）TERUO＠teruo<br>
 Hmm… I wish the hamburger was a bit tastier. The concept of a wrapped bake is quite nice though.<br>
 ■Rich Beef Stew Wrapped Hamburger 145g Lunch<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Cocos (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■1,199 yen<br>
 ■Ate day：26/2/26<br>
 <img src="imagenagoya/burg.png" alt="Hamburger image" width="200" height="220">（Photo I took）
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/3/2（Posted）TERUO＠teruo<br>
 Eat the tongue with sauce. Do that and you win. Absolutely with sauce. Want to eat it again.<br>
 ■King Salt Tongue_Pork（×Absolutely eat it with sauce and with rice.）_King Course<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Yakiniku King Nagoya Tokushige Branch<br>
 ■Nagoya City<br>
 ■3718 yen<br>
 ■Ate day：26/2/21<br>
 <img src="imagenagoya/yakiniku.png" alt="Yakiniku image" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/2 (Posted) TERUO＠teruo<br>
 uu...mmm.<br>
 ■Spaghetti Parma Style<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■Saizeriya Motoyama Ekimae Branch<br>
 ■Nagoya City<br>
 ■400 yen<br>
 ■Ate day: 26/2/21<br>
 <img src="imagenagoya/pasta0221.png" alt="Pasta image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/3/2 (Posted) TERUO＠teruo<br>
 There’s just something nice about it.<br>
 ■Tarako & Popcorn Shrimp Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Motoyama Ekimae Branch<br>
 ■Nagoya City<br>
 ■400 yen<br>
 ■Ate day：26/2/21<br>
 <img src="imagenagoya/doria0221.png" alt="Photo of the doria" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
 
 
-<div>
+<article>
 26/2/20 (Posted) TERUO＠teruo<br>
 I kind of want to eat it again. At the Dome-mae location, it’s  4.0. The Motoyama Saizeriya was a 3.5 though. Maybe it’s the different plates—how the heat transfers? Or the way it’s served? I wonder what makes the difference.<br>
 ■Peperoncino<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300 yen<br>
 ■Ate day: 26/2/14<br>
 <img src="imagenagoya/pepe0214.png" alt="Image of doria" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-<div>
+<article>
 26/2/20 (Posted) TERUO＠teruo<br>
 Pretty good.<br>
 ■Vegetable and Mushroom Pizza<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■400 yen<br>
 ■Ate day: 26/2/14<br>
 <img src="imagenagoya/pizza0214.png" alt="Image of doria" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-<div>
+<article>
 26/2/20 (Posted) TERUO＠teruo<br>
 There’s something intriguing about it.<br>
 ■Tarako and Popcorn Shrimp Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■400yen<br>
 ■Ate day: 26/2/14<br>
 <img src="imagenagoya/doria0214.png" alt="Doria image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-
-
-
-<div>
+<article>
 26/2/18 (Posted) TERUO @teruo<br>
 It was normally good.<br>
 ■Fried Chicken<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■COCO'S (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■About 500yen<br>
 ■Ate day: 26/2/13<br>
 <img src="imagenagoya/karaage0213.png" alt="Image of fried chicken" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/2/18 (Posted) TERUO＠teruo<br>
 Both the soy sauce ramen and the mapo rice are high level. I can totally see why some people get hooked on the mapo rice.<br>
 ■Ramen Set (Soy Sauce Ramen + Mapo Rice)<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■780yen<br>
 ■Ate day: 26/2/13<br>
 <img src="imagenagoya/soyramen.png" alt="Soy sauce ramen image" width="200" height="220">
 <img src="imagenagoya/mabohan.png" alt="Mapo rice image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/2/16 (Posted) TERUO＠teruo<br>
 The base itself isn’t that good. Kimchi-flavored hot pot bases are a real challenge. I think developing a good base is difficult. I’ve tried a bunch of them.<br>
 ■Tofu Chige<br>
 ■Tofu・Cookdo's Tofu Chige Soup<br>
 ■①Put water and soup in a pot, bring to a boil, and throw in the tofu.<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■Ate day：26/2/12<br>
 ■Genre：Hot Pot<br>
 
 <img src="iemeshi/chige.png" alt="Image of Tofu Chige" width="200" height="220">
 <img src="iemeshi/chigetuyu.png" alt="Image of Tofu Chige Soup" width="200" height="220">(Photos I took)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/2/15 (Posted) TERUO＠teruo<br>
 I want to eat this again.<br>
 ■Chicken Wings<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■600yen<br>
 ■Ate day: 26/2/11<br>
 <img src="imagenagoya/tebasaki.png" alt="Photo of chicken wings" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/2/15（Posted）TERUO＠teruo<br>
 Somehow, this taste is new. They’re using curry powder. Interesting.<br>
 ■Deep-fried cartilage<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■550yen<br>
 ■Ate day：26/2/11<br>
 <img src="imagenagoya/nankotu.png" alt="Photo of deep-fried cartilage" width="200" height="220">（Photo I took）
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/2/15 (Posted) TERUO＠teruo<br>
 As expected. I want to eat it again. Getting this for 1000 yen is amazing. tasty.<br>
 ■Night Ramen Set (Taiwan Ramen + Fried Rice + Taiwan Sweet and Sour Pork)<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■1000yen<br>
@@ -688,325 +622,233 @@ As expected. I want to eat it again. Getting this for 1000 yen is amazing. tasty
 <img src="imagenagoya/taiwan0211.png" alt="Image of Taiwan Ramen" width="200" height="220">
 <img src="imagenagoya/friedrice0211.png" alt="Fried Rice" width="200" height="220">
 <img src="imagenagoya/taiwansubuta.png" alt="Image of Taiwan Sweet and Sour Pork" width="200" height="220"> (Photo I took myself)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/2/13（Posted）TERUO＠teruo<br>
 Somehow, it wasn’t as good as the Peperoncino I had at Saizeriya on 26/2/7. On 2/7 I ate at the Nagoya Dome-mae branch, and on 2/8 at the Motoyama branch, and the plates were different.
 Since the plates were different, maybe the way the heat was retained or transferred was different as well?? That might have affected the taste.<br>
 ■Peperoncino<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Saizeriya Motoyama Ekimae Branch<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day：26/2/8<br>
 <img src="imagenagoya/pepe2.png" alt="Peperoncino image" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
 
-
-
-
-<div>
+<article>
 26/2/13（Posted）TERUO＠teruo<br>
 Yummy<br>
 ■Spicy Chicken<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Motoyama Ekimae Branch<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day：26/2/8<br>
 <img src="imagenagoya/chiken3saize.png" alt="Chicken image" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
-
-
-
-
-
-<div>
+<article>
 26/2/12（Posted）TERUO＠teruo<br>
 Good.<br>
 ■Peperoncino<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day: 26/2/7<br>
 <img src="imagenagoya/pepe.png" alt="Image of Peperoncino" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/2/12（Posted）TERUO＠teruo<br>
 Good.I want to eat it again. I think the sauce is good.<br>
 ■Young Chicken Diavolo Style × Rice（× At the end, put the rice on the hot plate and mix it with the corn and sauce before eating. I call it “corn rice” lol）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■650yen<br>
 ■Ate day：26/2/7<br>
 <img src="imagenagoya/diavoro.png" alt="Chicken image" width="200" height="220">
 <img src="imagenagoya/rice.png" alt="Rice image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/2/11（Posted）TERUO＠teruo<br>
 It was normally good.<br>
 ■Milano-Style Doria<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Saizeriya (Aeon Mall Nagoya Dome-mae)<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day：26/2/7<br>
 <img src="imagenagoya/doriasaize0207.png" alt="Chicken image" width="200" height="220">（Photo taken by myself）
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/2/11 (Posted) TERUO＠teruo<br>
 Good.<br>
 ■Spicy Chicken<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya (Aeon Mall Nagoya Dome-mae)<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day: 26/2/7<br>
 <img src="imagenagoya/chiken2saize.png" alt="Chicken image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-<div>
+<article>
 26/2/10（Posted）TERUO＠teruo<br>
 It was just normally good.<br>
 ■Pizza Quattro Formaggi<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■COCO’S (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■About 550yen<br>
 ■Ate day：26/2/6<br>
 <img src="imagenagoya/pizza0206.png" alt="Pizza image" width="200" height="220"> (Photo taken by me)
-</div>
-<hr>
+</article>
 
-
-
-
-
-
-
-<div>
+<article>
 26/2/10 (Posted) TERUO @teruo<br>
 A reliable 4.0 as always.<br>
 ■Mini Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■COCO'S (Meito Yomogidai branch)<br>
 ■Nagoya City<br>
 ■About 600yen<br>
 ■Ate day: 26/2/6<br>
 <img src="imagenagoya/doria0206.png" alt="Image of doria" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/2/7（Posted）TERUO＠teruo<br>
 I feel like this is good in its own way.<br>
 ■Buffalo Mozzarella Margherita Pizza<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome-mae<br>
 ■Nagoya City<br>
 ■400yen<br>
 ■Ate day：26/2/2<br>
 <img src="imagenagoya/pizzasaize.png" alt="Image of pizza" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-<div>
+<article>
 26/2/7（Posted）TERUO＠teruo<br>
 I was impressed. yummy.<br>
 ■Spicy Chicken（× Order only the spicy chicken. Focus and eat it.）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Saizeriya Aeon Mall Nagoya Dome Mae<br>
 ■Nagoya City<br>
 ■300yen<br>
 ■Ate day：26/2/2<br>
 <img src="imagenagoya/chikensaize.png" alt="chiken image" width="200" height="220">（Photo taken by me）
-</div>
-<hr>
+</article>
 
-
-<div>
-【Premiun Commnet（Billing）】<br>
-26/2/4（Posted）TERUO＠teruo<br>
-The ehomaki I ate (that was made for me) yesterday on 26/2/3 was way too good. Seriously, way too good.  
-That’s definitely a 4.0: “It breaks through the high wall of being just ‘normally good’—I want to eat it again.”  
-Apparently, if you buy one outside, it costs around 900 yen per roll. That’s way too expensive!!  
-If you buy the ingredients and make it at home, it’s insanely cheap.  
-This feels just like how Steve Wozniak said (I think he mentioned this in a book) that building a computer himself cost about $200,  
-but when Apple sold the Apple I, it was priced at $500.  
-※Though maybe it wasn’t specifically the Apple I story, but a basic computer—and the numbers might be off too lol.  
-It’s also the same as how Michael Dell realized that assembling computers himself and selling them would be cheaper, and turned that into a business.  
-I guess that’s just how the world works.  
-When you make things yourself, you can do it cheaper. That’s what crossed my mind.  
-For now, without overthinking things, I just want to be able to make ehomaki and feel happy!!  
-Actually, I *will* feel happy!!
-
-By the way, this time I helped make it too—like, about one hundred-millionth of it lol.<br>
-
-<img src="imagehoka/emaki.png" alt="恵方巻の画像" width="200" height="220">
-
-
-</div>
-
-<hr>
-
-
-
-<div>
+<article>
 26/2/3（Posted）TERUO＠teruo<br>
 The twice-cooked pork rice was insanely good.<br>
 ■Ramen Set (Taiwan Ramen + Twice-Cooked Pork Rice)<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■NagoyaCity<br>
 ■780yen<br>
 ■Ate day：26/2/2<br>
 <img src="imagenagoya/hoi.png" alt="Image of twice-cooked pork" width="200" height="220">
 <img src="imagenagoya/taiwan5.png" alt="Image of Taiwan ramen" width="200" height="220"> (Photos taken by me)
-</div>
-<hr>
+</article>
 
-
-
-
-<div>
+<article>
 26/2/2（Posted）TERUO＠teruo<br>
 normal. Good value for the price. Somehow huge.<br>
 ■Baked Potato<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■COCO'S (Meito Yomogidai branch)<br>
 ■Nagoya City<br>
 ■About 250 yen<br>
 ■Ate day：26/2/1<br>
 <img src="imagenagoya/poteto.png" alt="Baked potato with butter image" width="200" height="220"> (Photo taken by myself)
-</div>
-<hr>
+</article>
 
-
-<div>
+<article>
 26/2/1 (Posted) TERUO＠teruo<br>
 Quite high level. Serving pizza of this quality at this price must be tough for the pizza industry. After eating this, you might think, "Why bother anywhere else?"<br>
 ■Margherita<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■COCO'S (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■About 550 yen<br>
 ■Ate day: 26/1/31<br>
 <img src="imagenagoya/pizzacocos.png" alt="Image of pizza" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/2/1 (Posted) TERUO＠teruo<br>
 This is really good. Among Cocos dishes, this might be the best one lol<br>
 ■Mini Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■COCO'S (Meito Yomogidai Branch)<br>
 ■Nagoya City<br>
 ■About 600 yen<br>
 ■Ate day：26/1/31<br>
 <img src="imagenagoya/doria3.png" alt="Image of Doria" width="200" height="220"> (Photo I took)
-</div>
-<hr>
+</article>
 
 
-
-<div>
+<article>
 26/1/31（Posted）TERUO＠teruo<br>
 This store is good enough. I thought so because the Taiwan ramen is about 200 yen cheaper than the JR Nagoya Station branch.<br>
 ■Taiwan Ramen<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Misen Nagoya Station (Yanagibashi)<br>
 ■Nagoya City<br>
 ■770 yen<br>
 ■Ate day：26/1/30<br>
 <img src="imagenagoya/misen.png" alt="Image of Misen Taiwan Ramen" width="200" height="220">（Photo taken by myself）
-</div>
+</article>
 
-<hr>
-
-
-<div>
+<article>
 26/1/30 (Posted) TERUO @teruo<br>
 I want to eat it again.<br>
 ■Meat Ramen<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Sugakiya(Aeon Mall Nagoya Dome-mae)<br>
 ■NagoyaCity<br>
 ■530yen<br>
 ■Ate day: 26/1/20<br>
 <img src="imagenagoya/sugakiya4.png" alt="Image of Sugakiya meat ramen" width="200" height="220"> (Photo taken by me)
-</div>
-<hr>
+</article>
 
-
-
-
-
-<div>
+<article>
 26/1/30（投稿日）YOSHIO＠yoshio<br>
 New York–style sliced pizza. A large gas oven gives it an authentic feel. Baked at about 350℃. Two 1/8 slices larger than a palm, so the volume is satisfying,
 The taste isn’t bad, but the cheese has a heavy, bland flavor, making it overall closer to fast food. The freshness of the tomato and the crispness・
 and juiciness are weak, giving a dry, somewhat mushy impression. This may be a characteristic of New York–style pizza, assuming it’s not freshly made. Reconfirms that I’m a Neapolitan pizza person.<br>
 ■Cheese pizza, Jalapeño pizza, Cola<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■maple pizza<br>
 ■Taito-ku, Tokyo<br>
 ■Total 1600 yen<br>
 ■Ate day：26/1/23<br>
 <img src="imagetokyo23/pizza2.png" alt="Pizza image" width="200" height="220">
-</div>
+</article>
 
-<hr>
-
-
-<div>
+<article>
 26/1/30（Posted）TERUO＠teruo<br>
 I want to eat it again.<br>
 ■Ramen Set (Taiwan Ramen + Fried Rice)<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■750 yen<br>
 ■Ate day：26/1/14<br>
 <img src="imagenagoya/friedrice3.png" alt="Image of fried rice" width="200" height="220">
 <img src="imagenagoya/taiwan4.png" alt="Image of Taiwan ramen" width="200" height="220"> (Photos taken by myself)
-</div>
-<hr>
+</article>
 
-
-
-<div>
+<article>
 26/1/7（Posted）TERUO＠teruo<br>
 First time in my life?? I tried making fried rice.
 It was a normal 3.0, but I see some potential.
@@ -1027,41 +869,16 @@ Maybe because it’s just salt and pepper.<br>
 　(the egg white kind of takes shape and the yolk doesn’t do it).<br>
 　② Add rice. Break it up and mix with a spatula (roughly)<br>
 　③ Add black pepper and salt. Then mix.<br>
-⇒★★★ 3.0<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
 ■Ate day：26/1/6<br>
 ■Genre：Friedrice<br>
 　
 <img src="iemeshi/cha.png" alt="Fried rice image" width="200" height="220">
 <img src="iemeshi/cha2.png" alt="炒飯の画像" width="200" height="220">（Photo taken by me）
 
-</div>
+</article>
 
-<hr>
-
-
-
-
-
-
-
-
-
-<div>
-【Premium Comment (Billing)】<br>
-26/1/4 (Posted) TERUO @teruo<br>
-Yeah--------!! The okonomiyaki I ate yesterday, 26/1/3, at Nanjamonja (Nagoya City, near Shiogamaguchi Station) was insanely good—so good that even a full day later, I’m still moved by it.
-One of the reasons I created Yummy is because I truly believe that *what* you eat and *how* you eat it are absolutely essential to how delicious something becomes. When you put spicy sauce and mayonnaise on the deluxe okonomiyaki, it brings out every single aspect of its deliciousness.
-Honestly, I kind of feel like it could’ve been a 5.0. I can’t help but think that, haha. It was really, truly amazing. Man… the best. This is what you call being moved.
-<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
-</div>
-
-<hr>
-
-
-
-
-
-<div>
+<article>
 26/1/3 (Posted) TERUO＠teruo<br>
 Insanely delicious. A monster. Even a divine 5.0 rating would be fair. Seriously, this is god-tier.  
 I wonder how many times I’ve been here. Eating the Deluxe Okonomiyaki with spicy sauce and mayonnaise  
@@ -1076,7 +893,7 @@ And seriously, the spicy sauce and mayonnaise are essential.<br>
 
 ■Deluxe Okonomiyaki: 2 pcs × Extra-spicy Yakisoba 2-spice large portion (Meat, Shrimp, Squid) × Jaga Butter  
 (×Absolutely, under any circumstances, put spicy sauce and mayonnaise on the Deluxe Okonomiyaki.)<br>
-⇒★★★★ 4.5<br>
+⇒★★★★ <span class="score" data-score="4.5">4.5</span><br>
 ■NanjyaMonja<br>
 ■NagoyaCity<br>
 ■4350yen(Deluxe Okonomiyaki; 1200yen × 2 = 2400yen)<br>
@@ -1085,170 +902,68 @@ And seriously, the spicy sauce and mayonnaise are essential.<br>
 <img src="imagenagoya/zyagabata.png" alt="Photo of jaga butter" width="200" height="220"> 
 <img src="imagenagoya/yakisoba.png" alt="Photo of yakisoba" width="200" height="220"> (Photo I took)  
 
-</div>
+</article>
 
-<hr>
-
-
-
-
-
-
-
-
-
-<div>
-【Premium Comment (Billing)】<br>
-26/1/3 (Posted) TERUO @teruo<br>
-I had doria at Cocos on 1/2 (2026), and yeah—it's seriously good.
-If you look at the doria section below, you can tell how different the photos of Cocos’ doria are between 12/2/25 and 1/2/26 lol.
-It’s probably the amount of sauce. Even so, I honestly think Cocos’ doria is insanely delicious.
-I really wish they’d just give us the recipe.
-I want to make it at home.
-At this point, I’m basically a Cocos master lol.
-But hey—more masters, step up!!
-<li><a href="doria.html">Doria</a></li>
-</div>
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 26/1/2 (Posted) TERUO＠teruo<br>
 It was seriously delicious. It tastes like happiness. How good was it? So good that it made me want to try making doria at home.
 Compared to when I ate doria at Cocos on 25/12/2, it felt like this one had more sauce. If you compare the photos, you can probably see the difference. That might be one reason why it was so good.<br>
 ■Mini Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■COCO'S(Meito Yomogidai branch)<br>
 ■NagoyaCity<br>
 ■About600yen<br>
 ■Ate day: 26/1/2<br>
 <img src="imagenagoya/doria2.png" alt="Image of doria" width="200" height="220"> (Photo taken by me)
 
-</div>
+</article>
 
-<hr>
-
-
-
-
-
-
-
-
-<div>
-【Premium Comment (Billing)】<br>
-26/1/2 (Posted) TERUO @teruo<br>
-
-
-I didn’t buy it myself, and I didn’t cook anything either, but the seafood bowl I ate on 1/1 and 1/2 was really good.
-It was made by putting sashimi—octopus, salmon, sea bream, bonito, etc.—bought from Lopia (the supermarket run by Katopan’s husband) on vinegared rice.
-
-For some reason, it felt tastier than sashimi from an ordinary supermarket.
-I once heard from a high school student who works part-time at Lopia that their fish is good, and yeah… that was legit.
-
-If I remember correctly, Lopia originally started as a butcher shop, so I’d heard rumors that their meat is good—but honestly, their sashimi is great too.
-It’s a supermarket that really makes you curious.
-
-
-
-
-</div>
-
-
-<hr>
-
-
-
-
-
-
-
-
-<div>
+<article>
 26/1/1 (Posted) TERUO @teruo<br>
 When I took the first sip of the soup,it had impact.
 Somehow,it has a gentle flavor.<br>
 ■Meat Ramen (× Start by taking a few spoonfuls of the soup first.)<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Sugakiya(Aeon Mall Nagoya Dome-mae)<br>
 ■NagoyaCity<br>
 ■530yen<br>
 ■Ate day: 26/1/1<br>
 <img src="imagenagoya/sugakiya3.png" alt="Image of Sugakiya meat ramen" width="200" height="220"> (Photo taken by me)
-</div>
-<hr>
+</article>
 
 
 
 
-
-
-<div>
+<article>
 25/12/31（Posted on）TERUO＠teruo<br>
 good. That reassuring, comforting taste.<br>
 ■Ramen with Meat<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Sugakiya (Nagoya ESCA)<br>
 ■Nagoya City<br>
 ■590yen<br>
 ■Ate day：25/12/30<br>
 <img src="imagenagoya/sugakiya2.png" alt="Image of Sugakiya ramen with meat" width="200" height="220"> (Photo taken by me)
+</article>
 
-</div>
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（投稿日）YOSHIO＠yoshio<br>
 With a subtle saltiness and the natural sweetness of wheat, the dough itself is delicious, with a crispy texture. The gentle sweetness and juiciness of olive oil and mozzarella, combined with the outstanding sweet-and-tangy flavor of tomatoes. The aftertaste is light. “This is pizza.”<br>
 ■Margherita, Cola（×First, eat it just as it is and savor it to the absolute limit!）<br>
-⇒★★★★⋆ 4.5<br>
+⇒★★★★⋆ <span class="score" data-score="4.5">4.5</span><br>
 ■Pizzeria e Trattoria da ISA<br>
 ■〒153-0042 1-14-17 Aobadai, Meguro-ku, Tokyo<br>
 ■3000 yen<br>
 ■Ate day：25/11/2<br>
 <img src="imagetokyo23/pizza.png" alt="Image of pizza" width="200" height="220">
 <img src="imagetokyo23/pizzastore.png" alt="Image of the pizza restaurant" width="200" height="220">（Photos taken by me）
-</div>
+</article>
 
-<hr>
-
-
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（Posted） TERUO@teruo<br>
 High Quality.<br>
 ■Ramen set（Tonkotsu ramen＋Tenshinhan）<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■780yen<br>
@@ -1256,26 +971,13 @@ High Quality.<br>
 
 <img src="imagenagoya/tonkotsu.png" alt="tonkotsu" width="200" height="220">
 <img src="imagenagoya/tenshinhan.png" alt="tenshinhan" width="200" height="220"> (Photo taken by myself)
-</div>
+</article>
 
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（Posted） TERUO@teruo<br>
 4.0.<br>
 ■Ramen set（Taiwan ramen＋fried rice）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■750yen<br>
@@ -1283,25 +985,13 @@ High Quality.<br>
 
 <img src="imagenagoya/friedrice2.png" alt="Friedrice" width="200" height="220">
 <img src="imagenagoya/taiwan3.png" alt="Taiwan Ramen image" width="200" height="220"> (Photo taken by myself)
-</div>
+</article>
 
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-<div>
+<article>
 25/12/29（Posted） TERUO@teruo<br>
 In the end,I want to eat it again..<br>
 ■Ramen set（Taiwan ramen＋fried rice）<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■750yen<br>
@@ -1309,72 +999,45 @@ In the end,I want to eat it again..<br>
 
 <img src="imagenagoya/friedrice.png" alt="Friedrice" width="200" height="220">
 <img src="imagenagoya/taiwan2.png" alt="Taiwan Ramen image" width="200" height="220"> (Photo taken by myself)
-</div>
+</article>
 
-
-
-<hr>
-
-
-
-
-
-
-<div>
+<article>
 25/12/5（Posted） TERUO@teruo<br>
 Good.<br>
 ■Taiwan Ramen<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■600yen<br>
 ■Ate day: 25/12/5<br>
 <img src="imagenagoya/taiwan.png" alt="Taiwan Ramen image" width="200" height="220"> (Photo taken by myself)
-</div>
+</article>
 
-
-
-<hr>
-
-
-
-
-
-
-
-<div>25/12/2（Posted） TERUO＠teruo<br>
+<article>25/12/2（Posted） TERUO＠teruo<br>
 Gently yummy.<br>
 ■Mini Doria<br>
-⇒★★★★ 4.0<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
 ■COCO'S （Meito Yomogidai branch）<br>
 ■Nagoya City<br>
 ■About 600yen<br>
 ■Ate Day: 25/12/2<br>
 <img src="imagenagoya/doria.png" alt="Mini Doria" width="200" height="220"> (Photo taken by myself)
-</div>
+</article>
 
-
-
-
-<hr>
-
-
-
-
-
-<div>25/12/1（Posted） TERUO＠teruo<br> 
+<article>25/12/1（Posted） TERUO＠teruo<br> 
 Yummy!! I love this.The soup is a monster.<br>
 With the Meat Ramen at 530 yen, I’m already happy. So damn good.<br>
 ■[Super Ramen] Meat Ramen(×Start by drinking about five spoonfuls of the soup with the spoon provided. That’s where it begins.)<br>
-⇒★★★★⋆ 4.5<br>
+⇒★★★★⋆ <span class="score" data-score="4.5">4.5</span><br>
 ■Sugakiya (AEON Mall Nagoya Dome-mae)<br>
 ■Nagoya City<br>
 ■530yen<br>
 ■Ate Day: 25/12/1<br>
 <img src="imagenagoya/sugakiya.png" alt="Sugakiya Meat Ramen" width="200" height="220"> (Photo taken by myself)
+</article>
+
 
 </div>
-
 
 
 
@@ -1404,15 +1067,9 @@ With the Meat Ramen at 530 yen, I’m already happy. So damn good.<br>
 <li><a href="nagoyae.html">Nagoya</a></li>
 <li><a href="tokyo23e.html">Tokyo23</a></li>
 <li><a href="fukuokae.html">Fukuoka</a></li>
-
-
 <li><a href="ramene.html">Ramen</a></li>
 <li><a href="okonomiyakie.html">Okonomiyaki</a></li>
-
 <li><a href="yakinikue.html">Yakiniku</a></li>
-
-
-
 <li><a href="friedricee.html">FriedRice</a></li>
 </ul>
 
@@ -1461,6 +1118,145 @@ With the Meat Ramen at 530 yen, I’m already happy. So damn good.<br>
 </footer>
 
 
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
+
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
+
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
+
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
+
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
+
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
+
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
+
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
+
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
+
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+</script>
 
 
 
