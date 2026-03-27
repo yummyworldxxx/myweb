@@ -40,8 +40,20 @@ body {
 
 .menu-btn {
   position: absolute;
-  top: 0px;
+  top: 20px;
   right: 0px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header-left3{
+  list-style: none;
+  position: absolute;
+  top: 0px;
+  right:0px;
   font-size: 18px;
   cursor: pointer;
   margin: 0;
@@ -93,7 +105,7 @@ body {
 .site-header ul {
   list-style: none;
   display: flex;
-  gap:3px;  
+  gap:8px;  
   margin: 0;
   padding: 1px 6px;
 } 
@@ -126,11 +138,13 @@ body {
 
 
 .site-header h1 {
-  font-size: 34px; 
+  font-size: 36px; 
 }
 
 .site-header h2 {
-  font-size: 11px; 
+  font-size: 13px; 
+
+   margin-top: 8px; 
   
 }
 
@@ -138,12 +152,12 @@ body {
 
 
 .site-header ul li a {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 
 .logo {
-  width: 23px;   /* ←ここ小さくする */
+  width: 25px;   /* ←ここ小さくする */
      /* 縦横比そのまま */
 }
 
@@ -241,6 +255,7 @@ body {
 
 
 
+
   /* 画像をスマホサイズに自動で縮小 */
   img {
     width: 100%;
@@ -259,7 +274,7 @@ body {
 
 .menu-btn {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: px;
   font-size: 23px;
   cursor: pointer;
