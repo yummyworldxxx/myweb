@@ -254,6 +254,19 @@ body {
     position: static;  /* 固定を解除。スマホだと邪魔なので。 */
   }
 
+
+/* 三本線ボタン */
+
+.menu-btn {
+  position: absolute;
+  top: 10px;
+  right: px;
+  font-size: 23px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
  
 }
 
