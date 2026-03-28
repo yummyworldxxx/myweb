@@ -92,7 +92,7 @@ body {
 
 .site-header ul {
   list-style: none;
-  display: flex;
+display: flex;
   gap:3px;  
   margin: 0;
   padding: 1px 6px;
