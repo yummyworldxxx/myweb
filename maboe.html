@@ -20,8 +20,7 @@
 
 <header class="site-header">
 <h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
-
-<h2>1<2<3(normal)<3.5(pretty good)<|wall|<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+<h2>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
 
 
 
@@ -30,14 +29,24 @@
 <li><a href="nagoyae.html">Nagoya</a></li>
 <li><a href="tokyo23e.html">Tokyo23</a></li>
 <li><a href="ramene.html">Ramen</a></li>
-
 <li><a href="okonomiyakie.html">Okonomiyaki</a></li>
+<li><a href="chikene.html">Chiken</a></li>
+
 
 </ul>
 
 <ul>
 <li><a href="alle.html"><span class="u-yellow">AllGenre</span></a></li>
+
+<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
+
 <li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
+
+<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
+<li><a href="zirokeie.html">Zirokei</a></li>
+
+
+
 </ul>
 
 
@@ -49,11 +58,11 @@
      style="
        background-color:#ff6b6b;
        color:white;
-       padding:10px 22px;
+       padding:8px 14px;
        border-radius:12px;
        text-decoration:none;
        font-weight:bold;
-       font-size:16px;
+       font-size:13px;
        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
        transition:0.2s;
      "
@@ -65,26 +74,123 @@
 </div>
 
 
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="alle.html">AllGenre</a>
+  <a href="scalee.html">RatingScale</a>
+  <a href="visione.html">Vision</a>
+  <a href="storye.html">Story</a>
+  <a href="contacte.html">Contact</a>
+  <a href="premiume.html">Premium Comment</a>
+ 
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </header>
 
 
 
+<div class="sort-buttons">
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+ <button onclick="filterHighScore()">4.0+</button>
+</div>
 
 
 
-<div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+ 
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">All</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
+
+
+
+
+
+<article>
 26/2/18 (Posted) TERUO＠teruo<br>
 Both the soy sauce ramen and the mapo rice are high level. I can totally see why some people get hooked on the mapo rice.<br>
 ■Ramen Set (Soy Sauce Ramen + Mapo Rice)<br>
-⇒★★★⋆ 3.5<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
 ■Shisenrou<br>
 ■Nagoya City<br>
 ■780yen<br>
 ■Ate day: 26/2/13<br>
 <img src="imagenagoya/soyramen.png" alt="Soy sauce ramen image" width="200" height="220">
 <img src="imagenagoya/mabohan.png" alt="Mapo rice image" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+
+
 </div>
-<hr>
 
 
 
@@ -97,28 +203,228 @@ Both the soy sauce ramen and the mapo rice are high level. I can totally see why
 
 
 
+<footer class="site-footer">
+  <ul>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again.</li>
+    <li>4.0  Want to eat again.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+  </ul>
+
+
+<ul>
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="tokyo23e.html">Tokyo23</a></li>
+<li><a href="fukuokae.html">Fukuoka</a></li>
+<li><a href="ramene.html">Ramen</a></li>
+<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
+<li><a href="yakinikue.html">Yakiniku</a></li>
+<li><a href="friedricee.html">FriedRice</a></li>
+</ul>
+
+<ul>
+<li><a href="chikene.html">Chiken</a></li>
+<li><a href="doriae.html">Doria</a></li>
+<li><a href="yakisobae.html">Yakisoba</a></li>
+<li><a href="pastae.html">Pasta</a></li>
+<li><a href="hoikoroe.html">Hoikoro</a></li>
+<li><a href="taiwansubutae.html">Taiwansubuta</a></li>
+<li><a href="karaagee.html">Karaage</a></li>
+</ul>
+
+<ul>
+<li><a href="tebasakie.html">Tebasaki</a></li>
+<li><a href="pizzae.html">Pizza</a></li>
+<li><a href="JagaButtere.html">JagaButter</a></li>
+<li><a href="maboe.html">Mabo</a></li>
+<li><a href="hamburge.html">HamburgerSteak</a></li>
+<li><a href="iefriedricee.html">FriedRice（cook）</a></li>
+
+<li><a href="pope.html">Popcorn shrimp</a></li>
+
+</ul>
+
+<ul>
+<li><a href="tenshinhane.html">Tenshinhane</a></li>
+
+<li><a href="aburasobae.html">Aburasoba</a></li>
+
+<li><a href="soupe.html">Soup</a></li>
+
+
+<li><a href="iepode.html">Pod（cook）</a></li>
+<li><a href="cooke.html">Cook</a></li>
+<li><a href="nabee.html">NABE_Dr.</a></li>
+<li><a href="nabediarye.html">NABE_Diary</a></li>
+
+
+</ul>
+
+<ul>
+<li><a href="zirokeie.html">Zirokei</a></li>
+
+
+<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
+
+<li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
+
+<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
+
+
+
+
+</ul>
 
 
 
 
 
+</footer>
 
 
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
 
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
 
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
 
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
 
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
 
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
 
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
 
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
 
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
 
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
 
+  resetAll();
 
+  articles.sort((a, b) => getScore(b) - getScore(a));
 
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
 
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
 
+  resetAll();
 
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
+
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+</script>
 
 
 
