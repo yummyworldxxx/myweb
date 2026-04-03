@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>カツ丼の実食レビュー｜YummyWorld(Yummy World)</title>
+
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<header class="site-header">
+<h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+
+<h2>1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
+
+<ul>
+<li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="chiken.html">チキン</a></li>
+</ul>
+
+<ul>
+<li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
+
+<li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
+
+<li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+
+<li><a href="kurakatsu.html"><span class="u-pink">KURAKATSU</span></a></li>
+<li><a href="zirokei.html">二郎系</a></li>
+
+
+
+</ul>
+
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="all.html">全ジャンル</a>
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>
+  <a href="premium.html">Premium Comment</a>
+  
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+
+<div class="sort-buttons">
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+ <button onclick="filterHighScore()">4.0以上</button>
+</div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+
+<div id="articles">
+
+
+
+
+
+
+
+<article>
+26/4/3（投稿日）TERUO＠teruo<br>
+相当美味い。元気が出る。また食べたい。初めて食べたわ。<br>
+■チキチキボーン（骨なし）×（電子レンジで3個を50秒くらい温める）<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■スギ薬局<br>
+■280円位<br>
+■Ate day：26/4/2<br>
+<img src="imagenagoya/0402.jpeg" alt="チキチキボーンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+  </ul>
+
+
+<ul>
+
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="fukuoka.html">福岡市</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="yakiniku.html">焼肉</a></li>
+<li><a href="friedrice.html">炒飯</a></li>
+</ul>
+
+<ul>
+
+<li><a href="chiken.html">チキン</a></li>
+<li><a href="doria.html">ドリア</a></li>
+<li><a href="yakisoba.html">焼きそば</a></li>
+<li><a href="pasta.html">パスタ</a></li>
+<li><a href="hoikoro.html">回鍋肉</a></li>
+<li><a href="taiwansubuta.html">台湾酢豚</a></li>
+<li><a href="karaage.html">唐揚げ</a></li>
+</ul>
+
+<ul>
+<li><a href="tebasaki.html">手羽先</a></li>
+<li><a href="pizza.html">ピザ</a></li>
+<li><a href="JagaButter.html">じゃがバター</a></li>
+<li><a href="mabo.html">麻婆</a></li>
+<li><a href="hamburg.html">ハンバーグ</a></li>
+<li><a href="iefriedrice.html">炒飯（家飯）</a></li>
+<li><a href="pop.html">ポップコーンシュリンプ</a></li>
+</ul>
+
+<ul>
+<li><a href="tenshinhan.html">天津飯</a></li>
+<li><a href="aburasoba.html">油そば</a></li>
+<li><a href="soup.html">スープ</a></li>
+<li><a href="iepod.html">鍋（家飯）</a></li>
+<li><a href="cook.html">家飯</a></li>
+<li><a href="nabe.html">鍋の素_比較</a></li>
+<li><a href="nabediary.html">鍋_研究日記</a></li>
+</ul>
+
+
+<ul>
+<li><a href="zirokei.html">二郎系</a></li>
+<li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
+<li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+<li><a href="kurakatsu.html"><span class="u-pink">KURAKATSU</span></a></li>
+</ul>
+
+
+
+
+</footer>
+
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
+
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
+
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
+
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
+
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
+
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
+
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
+
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
+
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
+
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
