@@ -39,7 +39,7 @@ body {
 
 
 .site-header h1 {
-  font-size: 45px; 
+  font-size: 34px; 
 }
 
 .site-header h2 {
@@ -55,7 +55,7 @@ body {
 
 
 .logo {
-  width: 30px;   /* ←ここ小さくする */
+  width: 23px;   /* ←ここ小さくする */
      /* 縦横比そのまま */
 }
 
