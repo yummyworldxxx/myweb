@@ -1281,6 +1281,17 @@ function toggleMenu() {
 
 <script>
 /* -------------------------
+   初期順を保存（超重要）
+-------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach((article, index) => {
+    article.dataset.index = index;
+  });
+});
+
+/* -------------------------
    スコア取得
 -------------------------- */
 function getScore(article) {
@@ -1294,11 +1305,8 @@ function getScore(article) {
 -------------------------- */
 function getDate(article) {
   const text = article.textContent;
-
-  // 余計な空白削除
   const cleanText = text.replace(/\s+/g, "");
 
-  // 日付抽出（2桁/1桁対応）
   const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
   if (!match) return 0;
 
@@ -1306,7 +1314,6 @@ function getDate(article) {
   const month = match[2].padStart(2, "0");
   const day = match[3].padStart(2, "0");
 
-  // Safari対策（ISO形式に統一）
   const iso = `${year}-${month}-${day}`;
   const date = new Date(iso);
 
@@ -1372,7 +1379,7 @@ function sortByScoreLow() {
 }
 
 /* -------------------------
-   新着順（完全安定版）
+   新着順（同日安定版）
 -------------------------- */
 function sortByDate() {
   const container = document.getElementById("articles");
@@ -1380,30 +1387,24 @@ function sortByDate() {
 
   resetAll();
 
-  articles.sort((a, b) => getDate(b) - getDate(a));
+  articles.sort((a, b) => {
+    const dateDiff = getDate(b) - getDate(a);
+
+    // 日付が違う → 新着順
+    if (dateDiff !== 0) {
+      return dateDiff;
+    }
+
+    // 同じ日 → 元の順番
+    return a.dataset.index - b.dataset.index;
+  });
 
   articles.forEach(a => container.appendChild(a));
 }
-</script>
-
-<script>
 
 /* -------------------------
-   メニュー開閉
+   スコア完全一致フィルタ
 -------------------------- */
-function toggleScoreMenu() {
-  const menu = document.getElementById("scoreMenu");
-
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-
-</script>
-
-<script>
 function filterByScoreExact(score) {
   const articles = document.querySelectorAll("#articles article");
 
@@ -1417,8 +1418,20 @@ function filterByScoreExact(score) {
     }
   });
 }
-</script>
 
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
 
 
 
