@@ -137,10 +137,10 @@ function toggleMenu() {
 
 
 <div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0以上</button>
  <button onclick="sortByDate()">新着順</button>
  <button onclick="sortByScore()">評価（高い順）</button>
  <button onclick="sortByScoreLow()">評価（低い順）</button>
- <button onclick="filterHighScore()">4.0以上</button>
 </div>
 
 
@@ -1502,7 +1502,7 @@ function resetAll() {
 }
 
 /* -------------------------
-   4.0以上 + 高い順
+   4.0以上 + 新着順
 -------------------------- */
 function filterHighScore() {
   const container = document.getElementById("articles");
@@ -1510,7 +1510,16 @@ function filterHighScore() {
 
   resetAll();
 
-  articles.sort((a, b) => getScore(b) - getScore(a));
+  // 新着順にソート
+  articles.sort((a, b) => {
+    const dateDiff = getDate(b) - getDate(a);
+
+    if (dateDiff !== 0) {
+      return dateDiff;
+    }
+
+    return a.dataset.index - b.dataset.index;
+  });
 
   articles.forEach(article => {
     if (getScore(article) < 4.0) {
@@ -1519,6 +1528,8 @@ function filterHighScore() {
     container.appendChild(article);
   });
 }
+
+
 
 /* -------------------------
    高い順
