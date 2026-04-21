@@ -129,10 +129,11 @@ function toggleMenu() {
 
 
 <div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0以上</button>
  <button onclick="sortByDate()">新着順</button>
  <button onclick="sortByScore()">評価（高い順）</button>
  <button onclick="sortByScoreLow()">評価（低い順）</button>
- <button onclick="filterHighScore()">4.0以上</button>
+ 
 </div>
 
 
@@ -702,151 +703,12 @@ function toggleMenu() {
 
 </footer>
 
-<script>
-/* -------------------------
-   スコア取得
--------------------------- */
-function getScore(article) {
-  const el = article.querySelector(".score");
-  const val = el ? parseFloat(el.dataset.score) : NaN;
-  return isNaN(val) ? 0 : val;
-}
-
-/* -------------------------
-   日付取得（超安定版）
--------------------------- */
-function getDate(article) {
-  const text = article.textContent;
-
-  // 余計な空白削除
-  const cleanText = text.replace(/\s+/g, "");
-
-  // 日付抽出（2桁/1桁対応）
-  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
-  if (!match) return 0;
-
-  const year = "20" + match[1];
-  const month = match[2].padStart(2, "0");
-  const day = match[3].padStart(2, "0");
-
-  // Safari対策（ISO形式に統一）
-  const iso = `${year}-${month}-${day}`;
-  const date = new Date(iso);
-
-  return isNaN(date.getTime()) ? 0 : date.getTime();
-}
-
-/* -------------------------
-   リセット
--------------------------- */
-function resetAll() {
-  const articles = document.querySelectorAll("#articles article");
-
-  articles.forEach(article => {
-    article.style.display = "";
-  });
-}
-
-/* -------------------------
-   4.0以上 + 高い順
--------------------------- */
-function filterHighScore() {
-  const container = document.getElementById("articles");
-  const articles = Array.from(container.querySelectorAll("article"));
-
-  resetAll();
-
-  articles.sort((a, b) => getScore(b) - getScore(a));
-
-  articles.forEach(article => {
-    if (getScore(article) < 4.0) {
-      article.style.display = "none";
-    }
-    container.appendChild(article);
-  });
-}
-
-/* -------------------------
-   高い順
--------------------------- */
-function sortByScore() {
-  const container = document.getElementById("articles");
-  const articles = Array.from(container.querySelectorAll("article"));
-
-  resetAll();
-
-  articles.sort((a, b) => getScore(b) - getScore(a));
-
-  articles.forEach(a => container.appendChild(a));
-}
-
-/* -------------------------
-   低い順
--------------------------- */
-function sortByScoreLow() {
-  const container = document.getElementById("articles");
-  const articles = Array.from(container.querySelectorAll("article"));
-
-  resetAll();
-
-  articles.sort((a, b) => getScore(a) - getScore(b));
-
-  articles.forEach(a => container.appendChild(a));
-}
-
-/* -------------------------
-   新着順（完全安定版）
--------------------------- */
-function sortByDate() {
-  const container = document.getElementById("articles");
-  const articles = Array.from(container.querySelectorAll("article"));
-
-  resetAll();
-
-  articles.sort((a, b) => getDate(b) - getDate(a));
-
-  articles.forEach(a => container.appendChild(a));
-}
-</script>
-
-<script>
-
-/* -------------------------
-   メニュー開閉
--------------------------- */
-function toggleScoreMenu() {
-  const menu = document.getElementById("scoreMenu");
-
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-
-</script>
-
-<script>
-function filterByScoreExact(score) {
-  const articles = document.querySelectorAll("#articles article");
-
-  articles.forEach(article => {
-    const s = getScore(article);
-
-    if (s === score) {
-      article.style.display = "";
-    } else {
-      article.style.display = "none";
-    }
-  });
-}
-</script>
 
 
 
 
 
-
+<script src="script.js"></script>
 
 </body>
 
