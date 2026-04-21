@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 
-<title>Karaage Food Reviews｜YummyWorld(Yummy World)</title>
 
+<title>RYOTA 作品集｜YummyWorld(Yummy World)</title>
 
 
 <link rel="stylesheet" href="index.css" media="all">
@@ -12,41 +13,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
 
 </head>
 
+
 <body>
 
+
+
+
 <header class="site-header">
-<h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
-<h2>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+<h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
 
-
+<h2>RYOTA 作品集<br>1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
 
 <ul>
-<li><a href="index.html"><span class="u-white">【Japanese】</span></a></li>
-<li><a href="nagoyae.html">Nagoya</a></li>
-<li><a href="tokyo23e.html">Tokyo23</a></li>
-<li><a href="ramene.html">Ramen</a></li>
-<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
-<li><a href="chikene.html">Chiken</a></li>
+<li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="chiken.html">チキン</a></li>
+</ul>
+
+<ul>
+<li><a href="all.html"><span class="u-yellow">全ジャンル</span></a></li>
+
+<li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
+
+<li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+
+<li><a href="kurakatsu.html"><span class="u-pink">KURAKATSU</span></a></li>
+
+<li><a href="zirokei.html">二郎系</a></li>
 
 
 </ul>
 
-<ul>
-<li><a href="alle.html"><span class="u-yellow">AllGenre</span></a></li>
 
-<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
-
-<li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
-
-<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
-
-<li><a href="zirokeie.html">Zirokei</a></li>
-
-
-</ul>
 
 
 
@@ -74,18 +86,16 @@
 
 
 
-
-
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <div id="menu" class="menu">
-  <a href="alle.html">AllGenre</a>
-  <a href="scalee.html">RatingScale</a>
-  <a href="visione.html">Vision</a>
-  <a href="storye.html">Story</a>
-  <a href="contacte.html">Contact</a>
-  <a href="premiume.html">Premium Comment</a>
- 
+  <a href="all.html">全ジャンル</a>
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>
+  <a href="premium.html">Premium Comment</a>
+  
 </div>
 
 <script>
@@ -110,19 +120,21 @@ function toggleMenu() {
 
 
 
+
+
+
+
 </header>
 
 
 
+
 <div class="sort-buttons">
- <button onclick="sortByDate()">Newest</button>
- <button onclick="sortByScore()">Highest Rating</button>
- <button onclick="sortByScoreLow()">Lowest Rating</button>
- <button onclick="filterHighScore()">4.0+</button>
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+ <button onclick="filterHighScore()">4.0以上</button>
 </div>
-
-
-
 
 
 
@@ -131,8 +143,8 @@ function toggleMenu() {
   <!-- ボタン -->
   
 
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
  
-<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
 
   
   <!-- リスト -->
@@ -153,7 +165,7 @@ function toggleMenu() {
     <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
 
     <hr>
-    <div onclick="resetAll()">All</div>
+    <div onclick="resetAll()">全表示</div>
   </div>
 
 </div>
@@ -166,48 +178,30 @@ function toggleMenu() {
 
 <hr>
 
+
 <div id="articles">
 
 
+
+
+
+
 <article>
-26/4/21 (Posted) RYOTA＠ryota<br>
-When it comes to Gusto, it's hamburg steak<br>
-■Hamburg Steak Lunch Set<br>
+26/4/21（投稿日）RYOTA＠ryota<br>
+ガストと言ったらハンバーグ<br>
+■ハンバーグランチセット<br>
 ⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
-■Gusto (Shinjuku 3-chome Branch)<br>
-■Shinjuku City, Tokyo<br>
-■800 yen<br>
-■Ate day: 25/12/6<br>
-<img src="imagetokyo23/0421h.jpeg" alt="Hamburg steak image" width="200" height="220" loading="lazy"> (Photo taken by myself)
+■ガスト（新宿3丁目店）<br>
+■東京都新宿区<br>
+■800円<br>
+■Ate day：25/12/6<br>
+<img src="imagetokyo23/0421h.jpeg" alt="ハンバーグの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
 </article>
 
 
 
-<article>
-26/3/7 (Posted) TERUO＠teruo<br>
-Uumm. Not that good.<br>
-■Beef Hamburger Steak Lunch (Mustard Steak Sauce)<br>
-⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
-■Cocos (Meito Yomogidai Branch)<br>
-■Nagoya City<br>
-■1,089 yen<br>
-■Ate day: 26/3/3<br>
-<img src="imagenagoya/burg2.png" alt="Photo of the hamburger" width="200" height="220"> (Photo I took)
-</article>
 
 
-
-<article>
-26/3/3（Posted）TERUO＠teruo<br>
-Hmm… I wish the hamburger was a bit tastier. The concept of a wrapped bake is quite nice though.<br>
-■Rich Beef Stew Wrapped Hamburger 145g Lunch<br>
-⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
-■Cocos (Meito Yomogidai Branch)<br>
-■Nagoya City<br>
-■1,199 yen<br>
-■Ate day：26/2/26<br>
-<img src="imagenagoya/burg.png" alt="Hamburger image" width="200" height="220">（Photo I took）
-</article>
 
 
 
@@ -220,80 +214,75 @@ Hmm… I wish the hamburger was a bit tastier. The concept of a wrapped bake is 
 
 
 
-
-
-
-
 <footer class="site-footer">
-<ul>
-    <li>5.0  God</li>
-    <li>4.5  Definitely want to eat again.</li>
-    <li>4.0  Want to eat again.</li>
-    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
-    <li>3.5  Pretty good.</li>
-    <li>3.0  Normal.</li>
-    <li>2.0  Not tasty.</li>
-    <li>1.0  Terrible.</li>
-    <li>※If something is “delicious” but doesn’t make you want to eat it again, it’s rated 3.5.</li>
+  
+
+ <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+    <li>※「うまい（または、めちゃくちゃうまい）」が、「また食べたい」と思わない場合も3.5</li>
 
   </ul>
 
 
 <ul>
-<li><a href="nagoyae.html">Nagoya</a></li>
-<li><a href="tokyo23e.html">Tokyo23</a></li>
-<li><a href="fukuokae.html">Fukuoka</a></li>
-<li><a href="ramene.html">Ramen</a></li>
-<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
-<li><a href="yakinikue.html">Yakiniku</a></li>
-<li><a href="friedricee.html">FriedRice</a></li>
-<li><a href="chikene.html">Chiken</a></li>
-<li><a href="doriae.html">Doria</a></li>
+
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="fukuoka.html">福岡市</a></li>
+<li><a href="ramen.html">ラーメン</a></li>
+<li><a href="okonomiyaki.html">お好み焼き</a></li>
+<li><a href="yakiniku.html">焼肉</a></li>
+<li><a href="friedrice.html">炒飯</a></li>
+<li><a href="chiken.html">チキン</a></li>
+<li><a href="doria.html">ドリア</a></li>
 </ul>
 
 <ul>
-<li><a href="yakisobae.html">Yakisoba</a></li>
-<li><a href="pastae.html">Pasta</a></li>
-<li><a href="hoikoroe.html">Hoikoro</a></li>
-<li><a href="taiwansubutae.html">Taiwansubuta</a></li>
-<li><a href="karaagee.html">Karaage</a></li>
-<li><a href="tebasakie.html">Tebasaki</a></li>
-<li><a href="pizzae.html">Pizza</a></li>
-<li><a href="JagaButtere.html">JagaButter</a></li>
-<li><a href="maboe.html">Mabo</a></li>
 
+<li><a href="yakisoba.html">焼きそば</a></li>
+<li><a href="pasta.html">パスタ</a></li>
+<li><a href="hoikoro.html">回鍋肉</a></li>
+<li><a href="taiwansubuta.html">台湾酢豚</a></li>
+<li><a href="karaage.html">唐揚げ</a></li>
+<li><a href="tebasaki.html">手羽先</a></li>
+<li><a href="pizza.html">ピザ</a></li>
+<li><a href="JagaButter.html">じゃがバター</a></li>
+<li><a href="mabo.html">麻婆</a></li>
 </ul>
 
 <ul>
-<li><a href="hamburge.html">HamburgerSteak</a></li>
-<li><a href="pope.html">Popcorn shrimp</a></li>
-
-<li><a href="tenshinhane.html">Tenshinhane</a></li>
-<li><a href="aburasobae.html">Aburasoba</a></li>
-<li><a href="soupe.html">Soup</a></li>
-<li><a href="zirokeie.html">Zirokei</a></li>
-<li><a href="katsudone.html">Katsudone</a></li>
-<li><a href="kaitensushie.html">KaitenSushi</a></li>
-<li><a href="saladae.html">Salada</a></li>
-
+<li><a href="hamburg.html">ハンバーグ</a></li>
+<li><a href="pop.html">ポップコーンシュリンプ</a></li>
+<li><a href="tenshinhan.html">天津飯</a></li>
+<li><a href="aburasoba.html">油そば</a></li>
+<li><a href="soup.html">スープ</a></li>
+<li><a href="zirokei.html">二郎系</a></li>
+<li><a href="katsudon.html">カツ丼</a></li>
+<li><a href="kaitensushi.html">回転寿司</a></li>
+<li><a href="salada.html">サラダ</a></li>
 </ul>
 
+<ul>
+</ul>
 
 
 <ul>
-
-<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
-<li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
-<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
-
+<li><a href="fumiya.html"><span class="u-pink">FUMIYA</span></a></li>
+<li><a href="yoshio.html"><span class="u-pink">YOSHIO</span></a></li>
+<li><a href="kurakatsu.html"><span class="u-pink">KURAKATSU</span></a></li>
 </ul>
 
 
 
- 
 
 </footer>
-
 
 <script>
 /* -------------------------
@@ -441,10 +430,8 @@ function filterByScoreExact(score) {
 
 
 
-
-
-
 </body>
+
 
 
 </html>
