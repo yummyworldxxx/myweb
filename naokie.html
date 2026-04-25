@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>NAOKI Collection｜YummyWorld(Yummy World)</title>
+
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+<h2>NAOKI Collection<br>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+
+
+
+<ul>
+<li><a href="index.html"><span class="u-white">【Japanese】</span></a></li>
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="tokyo23e.html">Tokyo23</a></li>
+<li><a href="ramene.html">Ramen</a></li>
+<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
+<li><a href="chikene.html">Chiken</a></li>
+
+
+</ul>
+
+<ul>
+<li><a href="alle.html"><span class="u-yellow">AllGenre</span></a></li>
+
+<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
+
+<li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
+
+<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
+
+<li><a href="zirokeie.html">Zirokei</a></li>
+
+
+
+</ul>
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="alle.html">AllGenre</a>
+  <a href="scalee.html">RatingScale</a>
+  <a href="visione.html">Vision</a>
+  <a href="storye.html">Story</a>
+  <a href="contacte.html">Contact</a>
+  <a href="premiume.html">Premium Comment</a>
+ 
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0+</button>
+
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+</div>
+
+
+
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+ 
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">All</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
+
+
+
+
+<article>
+26/4/25 (Posted) NAOKI＠naoki<br>
+
+There is no strong odor typical of tonkotsu ramen, and the seasoning goes well with rice, making it very tasty. The free side dish of bean sprouts is also spicy and so good that you’ll want to keep eating it endlessly.
+
+<br>
+■Seared Tonkotsu Ramen + Mixed Rice<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Menya Isshin<br>
+■Nagoya City<br>
+■Around 1000 yen<br>
+■Ate day: 26/4/25<br>
+<img src="imagenagoya/0425r.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  
+ <ul>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again.</li>
+    <li>4.0  Want to eat again.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+    <li>※If something is “delicious” but doesn’t make you want to eat it again, it’s rated 3.5.</li>
+
+  </ul>
+
+
+<ul>
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="tokyo23e.html">Tokyo23</a></li>
+<li><a href="fukuokae.html">Fukuoka</a></li>
+<li><a href="ramene.html">Ramen</a></li>
+<li><a href="okonomiyakie.html">Okonomiyaki</a></li>
+<li><a href="yakinikue.html">Yakiniku</a></li>
+<li><a href="friedricee.html">FriedRice</a></li>
+<li><a href="chikene.html">Chiken</a></li>
+<li><a href="doriae.html">Doria</a></li>
+</ul>
+
+<ul>
+<li><a href="yakisobae.html">Yakisoba</a></li>
+<li><a href="pastae.html">Pasta</a></li>
+<li><a href="hoikoroe.html">Hoikoro</a></li>
+<li><a href="taiwansubutae.html">Taiwansubuta</a></li>
+<li><a href="karaagee.html">Karaage</a></li>
+<li><a href="tebasakie.html">Tebasaki</a></li>
+<li><a href="pizzae.html">Pizza</a></li>
+<li><a href="JagaButtere.html">JagaButter</a></li>
+<li><a href="maboe.html">Mabo</a></li>
+
+</ul>
+
+<ul>
+<li><a href="hamburge.html">HamburgerSteak</a></li>
+<li><a href="pope.html">Popcorn shrimp</a></li>
+
+<li><a href="tenshinhane.html">Tenshinhane</a></li>
+<li><a href="aburasobae.html">Aburasoba</a></li>
+<li><a href="soupe.html">Soup</a></li>
+<li><a href="zirokeie.html">Zirokei</a></li>
+<li><a href="katsudone.html">Katsudone</a></li>
+<li><a href="kaitensushie.html">KaitenSushi</a></li>
+<li><a href="saladae.html">Salada</a></li>
+
+</ul>
+
+
+
+<ul>
+
+<li><a href="fumiyae.html"><span class="u-pink">FUMIYA</span></a></li>
+<li><a href="yoshioe.html"><span class="u-pink">YOSHIO</span></a></li>
+<li><a href="kurakatsue.html"><span class="u-pink">KURAKATSU</span></a></li>
+
+</ul>
+
+
+
+</footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
