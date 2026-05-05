@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Food Reviews from Nagoya and Around the World｜YummyWorld(Yummy World)</title>
+
+<meta name="description" content="YummyWorld(Yummy World)is a food review site featuring actual tastings from Nagoya and around the world. We evaluate and showcase dishes like hot pot bases and Nagoya specialties with photos.">
+
+<meta name="keywords" content="YummyWorld, Yummy World, Yummy">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+<h2>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+
+
+
+<ul>
+<li><a href="index.html"><span class="u-white">【Japanese】</span></a></li>
+
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="yokohamae.html">Yokohama</a></li>
+
+<li><a href="tokyo23e.html">Tokyo23</a></li>
+
+<li><a href="fukuokae.html">Fukuoka</a></li>
+
+
+
+
+</ul>
+
+<ul>
+<li><a href="saizeriyae.html">Saizeriya</a></li>
+
+<li><a href="cocose.html">COCOS</a></li>
+
+
+</ul>
+
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="scalee.html">RatingScale</a>
+  <a href="visione.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contacte.html">Contact</a>
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0+</button>
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+</div>
+
+
+
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+ 
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">All</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/4/18 (posted) TERUO＠teruo<br>
+Not that great. The single doria is better.<br>
+■Mini! Doria & Choice Mini! Pasta (Mini! Fresh Basil & Mozzarella Tomato Pasta) Lunch<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■COCO’S (Meito Yomogidai store)<br>
+■Nagoya City<br>
+■1199 yen<br>
+■Ate day: 26/4/17<br>
+<img src="imagenagoya/0417.jpeg" alt="Image of doria lunch" width="200" height="220" loading="lazy">(photo taken by me)
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/4/10（投稿日）TERUO＠teruo<br>
+As expected, it’s yummy. I’ve always thought this might be the best thing at Cocos lol. It’s really yummy.<br>
+■Mini Doria<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■COCOS (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■Around 600 yen<br>
+■Ate day: 26/4/9<br>
+<img src="imagenagoya/doria0409.jpeg" alt="Doria image" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+<article>
+26/4/10（Posted）TERUO＠teruo<br>
+Pretty good.<br>
+■Corn Soup<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■COCO'S (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■319 yen<br>
+■Ate day: 26/4/9<br>
+<img src="imagenagoya/soup0409.jpeg" alt="Image of corn soup" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+<article>
+26/4/9 (Posted) TERUO＠teruo<br>
+Kinda good, actually.<br>
+■Popcorn Shrimp<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Cocos (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■275 yen<br>
+■Ate day: 26/4/9<br>
+<img src="imagenagoya/pop0409.jpeg" alt="Image of popcorn shrimp" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/3/24（Posted）TERUO＠teruo<br>
+Pretty good taste<br>
+■Popcorn Shrimp<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Coco's (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■275 yen<br>
+■Ate day：26/3/24<br>
+<img src="imagenagoya/popcorn0324.jpeg" alt="Image of popcorn shrimp" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+<article>
+26/3/23 (Posted) TERUO＠teruo<br>
+Pretty good<br>
+■Popcorn Shrimp<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Cocos (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■275 yen<br>
+■Ate day: 26/3/22<br>
+<img src="imagenagoya/pop.jpeg" alt="Image of popcorn shrimp" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+<article>
+26/3/7 (Posted) TERUO＠teruo<br>
+Uumm. Not that good.<br>
+■Beef Hamburger Steak Lunch (Mustard Steak Sauce)<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■Cocos (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■1,089 yen<br>
+■Ate day: 26/3/3<br>
+<img src="imagenagoya/burg2.png" alt="Photo of the hamburger" width="200" height="220"> (Photo I took)
+</article>
+
+<article>
+26/3/3（Posted）TERUO＠teruo<br>
+Hmm… I wish the hamburger was a bit tastier. The concept of a wrapped bake is quite nice though.<br>
+■Rich Beef Stew Wrapped Hamburger 145g Lunch<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Cocos (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■1,199 yen<br>
+■Ate day：26/2/26<br>
+<img src="imagenagoya/burg.png" alt="Hamburger image" width="200" height="220">（Photo I took）
+</article>
+
+
+<article>
+26/2/18 (Posted) TERUO @teruo<br>
+It was normally good.<br>
+■Fried Chicken<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■COCO'S (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■About 500yen<br>
+■Ate day: 26/2/13<br>
+<img src="imagenagoya/karaage0213.png" alt="Image of fried chicken" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+
+
+<article>
+26/2/10（Posted）TERUO＠teruo<br>
+It was just normally good.<br>
+■Pizza Quattro Formaggi<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■COCO’S (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■About 550yen<br>
+■Ate day：26/2/6<br>
+<img src="imagenagoya/pizza0206.png" alt="Pizza image" width="200" height="220"> (Photo taken by me)
+</article>
+
+<article>
+26/2/10 (Posted) TERUO @teruo<br>
+A reliable 4.0 as always.<br>
+■Mini Doria<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■COCO'S (Meito Yomogidai branch)<br>
+■Nagoya City<br>
+■About 600yen<br>
+■Ate day: 26/2/6<br>
+<img src="imagenagoya/doria0206.png" alt="Image of doria" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+<article>
+26/2/2（Posted）TERUO＠teruo<br>
+normal. Good value for the price. Somehow huge.<br>
+■Baked Potato<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■COCO'S (Meito Yomogidai branch)<br>
+■Nagoya City<br>
+■About 250 yen<br>
+■Ate day：26/2/1<br>
+<img src="imagenagoya/poteto.png" alt="Baked potato with butter image" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+<article>
+26/2/1 (Posted) TERUO＠teruo<br>
+This is really good. Among Cocos dishes, this might be the best one lol<br>
+■Mini Doria<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■COCO'S (Meito Yomogidai Branch)<br>
+■Nagoya City<br>
+■About 600 yen<br>
+■Ate day：26/1/31<br>
+<img src="imagenagoya/doria3.png" alt="Image of Doria" width="200" height="220"> (Photo I took)
+</article>
+
+
+
+<article>
+26/1/2 (Posted) TERUO＠teruo<br>
+It was seriously delicious. It tastes like happiness. How good was it? So good that it made me want to try making doria at home.
+Compared to when I ate doria at Cocos on 25/12/2, it felt like this one had more sauce. If you compare the photos, you can probably see the difference. That might be one reason why it was so good.<br>
+■Mini Doria<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■COCO'S(Meito Yomogidai branch)<br>
+■NagoyaCity<br>
+■About600yen<br>
+■Ate day: 26/1/2<br>
+<img src="imagenagoya/doria2.png" alt="Image of doria" width="200" height="220"> (Photo taken by me)
+
+</article>
+
+
+
+
+
+
+<article>25/12/2（Posted） TERUO＠teruo<br>
+Gently yummy.<br>
+■Mini Doria<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■COCO'S （Meito Yomogidai branch）<br>
+■Nagoya City<br>
+■About 600yen<br>
+■Ate Day: 25/12/2<br>
+<img src="imagenagoya/doria.png" alt="Mini Doria" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <ul>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again.</li>
+    <li>4.0  Want to eat again.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+    <li>※If something is “delicious” but doesn’t make you want to eat it again, it’s rated 3.5.</li>
+
+  </ul>
+
+
+
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
