@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Hoikoro Food Reviews｜YummyWorld(Yummy World)</title>
+
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+<h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+<h2>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+
+
+
+<ul>
+<li><a href="index.html"><span class="u-white">【Japanese】</span></a></li>
+
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="yokohamae.html">Yokohama</a></li>
+<li><a href="tokyo23e.html">Tokyo23</a></li>
+<li><a href="fukuokae.html">Fukuoka</a></li>
+
+</ul>
+
+
+
+
+<ul>
+<li><a href="saizeriyae.html">Saizeriya</a></li>
+
+</ul>
+
+
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="scalee.html">RatingScale</a>
+  <a href="visione.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contacte.html">Contact</a>
+ 
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0+</button>
+
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+</div>
+
+
+
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+ 
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">All</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
+
+<article>
+26/3/22 (Posted) FUMIYA@fumiya<br>
+Nagahama ramen. The noodles were firm and snappy—this was the ultimate tonkotsu ramen. It was so good I almost ordered shochu by mistake thinking it was chashu.
+<br>
+■Tonkotsu Ramen + Shochu (× If you pour a little shochu into the ramen, you can enjoy both ramen and alcohol at the same time—two birds with one stone!!!)<br>
+⇒★★★★★ <span class="score" data-score="5.0">5.0</span><br>
+■Ganso Ramen Nagahamaya (Kawabata Shopping Street)<br>
+■Fukuoka City<br>
+■700 yen (tonkotsu ramen)<br>
+■Ate day: 26/3/21<br>
+<img src="imagefukuoka/nagahama.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+ 
+<ul>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again.</li>
+    <li>4.0  Want to eat again.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+    <li>※If something is “delicious” but doesn’t make you want to eat it again, it’s rated 3.5.</li>
+
+</ul>
+
+
+
+
+
+
+</footer>
+
+
+<script>
+/* -------------------------
+   スコア取得
+-------------------------- */
+function getScore(article) {
+  const el = article.querySelector(".score");
+  const val = el ? parseFloat(el.dataset.score) : NaN;
+  return isNaN(val) ? 0 : val;
+}
+
+/* -------------------------
+   日付取得（超安定版）
+-------------------------- */
+function getDate(article) {
+  const text = article.textContent;
+
+  // 余計な空白削除
+  const cleanText = text.replace(/\s+/g, "");
+
+  // 日付抽出（2桁/1桁対応）
+  const match = cleanText.match(/(\d{2})\/(\d{1,2})\/(\d{1,2})/);
+  if (!match) return 0;
+
+  const year = "20" + match[1];
+  const month = match[2].padStart(2, "0");
+  const day = match[3].padStart(2, "0");
+
+  // Safari対策（ISO形式に統一）
+  const iso = `${year}-${month}-${day}`;
+  const date = new Date(iso);
+
+  return isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+/* -------------------------
+   リセット
+-------------------------- */
+function resetAll() {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    article.style.display = "";
+  });
+}
+
+/* -------------------------
+   4.0以上 + 高い順
+-------------------------- */
+function filterHighScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(article => {
+    if (getScore(article) < 4.0) {
+      article.style.display = "none";
+    }
+    container.appendChild(article);
+  });
+}
+
+/* -------------------------
+   高い順
+-------------------------- */
+function sortByScore() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(b) - getScore(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   低い順
+-------------------------- */
+function sortByScoreLow() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getScore(a) - getScore(b));
+
+  articles.forEach(a => container.appendChild(a));
+}
+
+/* -------------------------
+   新着順（完全安定版）
+-------------------------- */
+function sortByDate() {
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  resetAll();
+
+  articles.sort((a, b) => getDate(b) - getDate(a));
+
+  articles.forEach(a => container.appendChild(a));
+}
+</script>
+
+<script>
+
+/* -------------------------
+   メニュー開閉
+-------------------------- */
+function toggleScoreMenu() {
+  const menu = document.getElementById("scoreMenu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+</script>
+
+<script>
+function filterByScoreExact(score) {
+  const articles = document.querySelectorAll("#articles article");
+
+  articles.forEach(article => {
+    const s = getScore(article);
+
+    if (s === score) {
+      article.style.display = "";
+    } else {
+      article.style.display = "none";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="script.js"></script>
+
+
+
+
+</html>

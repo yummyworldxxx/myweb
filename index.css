@@ -1,0 +1,293 @@
+.sort-buttons {
+  display: flex;
+  gap: 5px;        /* ボタンの間隔 */
+  margin: 5px 0;
+}
+
+.sort-buttons button {
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+article {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* 三本線ボタン */
+
+.menu-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* メニュー本体 */
+.menu {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  padding: 15px;
+  display: none; /* 最初は非表示 */
+}
+
+/* メニュー中身 */
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+
+
+
+
+.site-header{
+  display: flex;
+  
+  align-items: center;
+  background-color: black;
+  color: orange; 
+  height: 75px;
+  position: relative;
+}
+
+.site-header ul {
+  list-style: none;
+display: flex;
+  gap:3px;  
+  margin: 0;
+  padding: 1px 6px;
+} 
+
+.site-header a {
+  color: orange;
+  text-decoration: none;
+}
+
+.u-yellow {
+  color: yellow;   /* u だけ黄色 */
+}
+
+.u-white {
+  color: white;   /* u だけ白色 */
+}
+
+.u-pink {
+  color: pink;   /* u だけ白色 */
+}
+
+
+
+
+.site-header a:hover {
+  color: #ffcc00;
+}
+
+
+
+
+.site-header h1 {
+  font-size: 34px; 
+}
+
+.site-header h2 {
+  font-size: 11px; 
+  
+}
+
+
+
+
+.site-header ul li a {
+  font-size: 11px;
+}
+
+
+.logo {
+  width: 23px;   /* ←ここ小さくする */
+     /* 縦横比そのまま */
+}
+
+
+
+
+
+body {
+  margin: 0;
+}
+
+.site-header h1 {
+  cursor: pointer;
+}
+
+.site-header h1:hover {
+  color: #ffcc00;
+}
+
+
+
+
+
+.site-footer {
+  position: sticky;   /* 画面下に固定 */
+  bottom: 0;
+  width: 100%;
+  color: orange;
+  background:black;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffcc00;
+}
+
+
+
+
+/* スマホ（最大幅 600px 以下）向け */
+@media (max-width: 600px) {
+
+  /* ヘッダー全体 */
+  .site-header {
+    flex-direction: column;   /* PCは横並び→スマホは縦並び */
+    height:auto;
+    text-align: center;  
+    }
+
+  /* タイトル（Yummy） */
+  .site-header h1 {
+    font-size: 40px;
+    margin:0;
+  }
+
+   .site-header h1 {
+    align-self: flex-start; /* 左寄せ */
+    margin-left: 10px;      /* 左端ベタ付き防止（好みで） */
+  }
+
+  /* サブタイトル */
+  .site-header h2 {
+    font-size: 14px;
+    margin:0;
+  }
+
+
+
+  /* ナビの文字 */
+  .site-header ul li a {
+    font-size: 13px;
+  }
+
+
+.site-header ul {
+    margin:0;
+  }
+
+
+
+
+
+
+  /* 画像をスマホサイズに自動で縮小 */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* フッターはスマホで縦並びにしたほうが読みやすい */
+  .site-footer {
+    flex-direction: column;
+    font-size: 15px;
+    position: static;  /* 固定を解除。スマホだと邪魔なので。 */
+  }
+
+
+/* 三本線ボタン */
+
+.menu-btn {
+  position: absolute;
+  top: 10px;
+  right: px;
+  font-size: 23px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

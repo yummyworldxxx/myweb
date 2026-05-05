@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YummyWorld(Yummy World)｜名古屋から世界の実食レビュー</title>
+
+<meta name="description" content="YummyWorld(Yummy World)は名古屋を始めとした世界のグルメを実食レビューするサイト。鍋の素や名古屋飯などを写真付きで評価・紹介。">
+
+<meta name="keywords" content="YummyWorld, Yummy World, Yummy">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<header class="site-header">
+<h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+
+<h2>1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
+
+<ul>
+<li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="yokohama.html">横浜市</a></li>
+<li><a href="tokyo23.html">東京23区</a></li>
+<li><a href="fukuoka.html">福岡市</a></li>
+
+</ul>
+
+
+<ul>
+<li><a href="saizeriya.html">サイゼリヤ</a></li>
+
+
+</ul>
+
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>  
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0以上</button>
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+</div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+
+<div id="articles">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/4/22（投稿日）TERUO＠teruo<br>
+初めて食べた。普通に美味いくらいやね。<br>
+■イタリアンハンバーグ×ライス<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■650円<br>
+■Ate day：26/4/22<br>
+<img src="imagenagoya/0422c2.jpeg" alt="イタリアンハンバーグの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+<article>
+26/4/22（投稿日）TERUO＠teruo<br>
+流石。美味いわ。また食べたい。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/4/22<br>
+<img src="imagenagoya/0422c1.jpeg" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/4/7（投稿日）TERUO＠teruo<br>
+普通。<br>
+■田舎風ミネストローネ<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/4/6<br>
+<img src="imagenagoya/s0406.jpeg" alt="ミネストローネの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+<article>
+26/4/7（投稿日）TERUO＠teruo<br>
+また食べたい。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/4/6<br>
+<img src="imagenagoya/0406.jpeg" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/3/24（投稿日）TERUO＠teruo<br>
+ドレッシングよいな。うまかった<br>
+■ポップコーンシュリンプ<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/23<br>
+<img src="imagenagoya/popcorn0323.jpeg" alt=チキンの画像" width="200" height="220">
+</article>
+
+
+
+<article>
+26/3/24（投稿日）TERUO＠teruo<br>
+また食べたい。もっと良く焼いてくれたら4.0の中でも上になる。<br>
+■若鶏のディアボロ風×ライス（×最後らへんにご飯を鉄板に入れてコーンとタレと混ぜて食べる）<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■650円<br>
+■Ate day：26/3/23<br>
+<img src="imagenagoya/diavoro0323.jpeg" alt=チキンの画像" width="200" height="220">
+</article>
+
+
+<article>
+26/3/24（投稿日）TERUO＠teruo<br>
+美味い。安定。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/23<br>
+<img src="imagenagoya/chiken0323.jpeg" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/3/11（投稿日）TERUO＠teruo<br>
+ドーム前のペペロンチーノはやはり美味い。また食べたい。<br>
+■ペペロンチーノ<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/6<br>
+<img src="imagenagoya/pepe0306.png" alt="ペペロンチーノの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/11（投稿日）TERUO＠teruo<br>
+美味い。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/6<br>
+<img src="imagenagoya/chiken0306.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/10（投稿日）TERUO＠teruo<br>
+美味い。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/5<br>
+<img src="imagenagoya/chiken0305.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/10（投稿日）TERUO＠teruo<br>
+良い感じ。<br>
+■タラコとポップコーンシュリンプのドリア<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/3/5<br>
+<img src="imagenagoya/doria0305.png" alt="ドリアの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/9（投稿日）TERUO＠teruo<br>
+うまい。相当レベル高い。食べ続けている内に4.0になりそう。<br>
+■たまねぎのズッパ<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/4<br>
+<img src="imagenagoya/zupa0304.png" alt="タマネギのズッパの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/9（投稿日）TERUO＠teruo<br>
+あんまし美味しくねぇな。<br>
+■柔らかチキンのチーズ焼き×ライス<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■650円<br>
+■Ate day：26/3/4<br>
+<img src="imagenagoya/yawaraka0304.png" alt="柔らかチキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/9（投稿日）TERUO＠teruo<br>
+流石。美味い。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/3/4<br>
+<img src="imagenagoya/chiken0304.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+<article>
+26/3/2（投稿日）TERUO＠teruo<br>
+あんましやな。<br>
+■パルマ風スパゲッティ<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/2/21<br>
+<img src="imagenagoya/pasta0221.png" alt="パスタの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/3/2（投稿日）TERUO＠teruo<br>
+なんか良いよな。<br>
+■タラコとポップコーンシュリンプのドリア<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/2/21<br>
+<img src="imagenagoya/doria0221.png" alt="ドリアの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+<article>
+26/2/20（投稿日）TERUO＠teruo<br>
+なんかまた食べたいんだよな。やはりドーム前だと4.0だな。本山のサイゼリヤは3.5だったけど。皿が違うから、熱の伝わり方なのか。提供の仕方なのか。どうなんだろう。<br>
+■ペペロンチーノ<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/14<br>
+<img src="imagenagoya/pepe0214.png" alt="ドリアの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/20（投稿日）TERUO＠teruo<br>
+良い感じ。<br>
+■野菜ときのこのピザ<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/2/14<br>
+<img src="imagenagoya/pizza0214.png" alt="ドリアの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/20（投稿日）TERUO＠teruo<br>
+なんか気になる存在。<br>
+■タラコとポップコーンシュリンプのドリア<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/2/14<br>
+<img src="imagenagoya/doria0214.png" alt="ドリアの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+<article>
+26/2/13（投稿日）TERUO＠teruo<br>
+26/2/7にサイゼでペペロンチーノ食べたときよりは美味しくなかった。2/7の時はドーム前店で食べて、2/8の本山店の時とは皿が違うね。
+皿が違い、熱の伝わり方が違う？？のが影響しているかもな。<br>
+■ペペロンチーノ<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/8<br>
+<img src="imagenagoya/pepe2.png" alt="ペペロンチーノの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+<article>
+26/2/13（投稿日）TERUO＠teruo<br>
+美味い。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ 本山駅前店<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/8<br>
+<img src="imagenagoya/chiken3saize.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/12（投稿日）TERUO＠teruo<br>
+美味かった。<br>
+■ペペロンチーノ<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/7<br>
+<img src="imagenagoya/pepe.png" alt="ペペロンチーノの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/12（投稿日）TERUO＠teruo<br>
+うまい。また食べたい。タレが良い気がするわ。<br>
+■若鶏のディアボロ風×ライス（×最後はご飯を鉄板に入れてコーンとタレとライスを混ぜて食べる。コーンご飯と呼びます笑）<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■650円<br>
+■Ate day：26/2/7<br>
+<img src="imagenagoya/diavoro.png" alt="チキンの画像" width="200" height="220" loading="lazy">
+<img src="imagenagoya/rice.png" alt="ライスの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/11（投稿日）TERUO＠teruo<br>
+普通にうまかった。<br>
+■ミラノ風ドリア<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/7<br>
+<img src="imagenagoya/doriasaize0207.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/11（投稿日）TERUO＠teruo<br>
+美味い。<br>
+■辛味チキン<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/7<br>
+<img src="imagenagoya/chiken2saize.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+<article>
+26/2/7（投稿日）TERUO＠teruo<br>
+コレはコレで良い気がする。<br>
+■バッファローモッツァレラのマルゲリータピザ<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■400円<br>
+■Ate day：26/2/2<br>
+<img src="imagenagoya/pizzasaize.png" alt="ピザの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+<article>
+26/2/7（投稿日）TERUO＠teruo<br>
+感動した。美味い。<br>
+■辛味チキン（×辛味チキンだけを頼み。集中して食べること。）<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■サイゼリヤ イオンモールナゴヤドーム前<br>
+■名古屋市<br>
+■300円<br>
+■Ate day：26/2/2<br>
+<img src="imagenagoya/chikensaize.png" alt="チキンの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+    <li>※「うまい（または、めちゃくちゃうまい）」が、「また食べたい」と思わない場合も3.5</li>
+
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
