@@ -1,6 +1,6 @@
 # Yummy
 
-**Yummy is a space-level project.**
+**Yummy is a space revolution project.**
 Our goal is to surpass Google in the food domain.
 
 ---
@@ -28,8 +28,6 @@ if it doesn’t make you want to eat it again, it’s rated **3.5**.
 ---
 
 ## Core Concept
-
-Yummy doesn’t just evaluate taste.
 
 We evaluate:
 
