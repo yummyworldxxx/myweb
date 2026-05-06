@@ -29,19 +29,10 @@ if it doesn’t make you want to eat it again, it’s rated **3.5**.
 
 ## Core Concept
 
-We evaluate:
-
 * **Whether you want to eat it again**
 * **Single items or combinations**
 * **Food × how to eat it**
 
----
-
-## Features
-
-* Unique rating system (1 → 5.0)
-* Supports **single-item reviews** and **combo reviews**
-* Focus on **reproducible experiences** (how to eat it matters)
 
 ---
 
