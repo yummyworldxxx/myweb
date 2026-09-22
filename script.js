@@ -42,12 +42,22 @@ function getDate(article) {
    リセット
 -------------------------- */
 function resetAll() {
-  const articles = document.querySelectorAll("#articles article");
+  const container = document.getElementById("articles");
+  const articles = Array.from(container.querySelectorAll("article"));
+
+  articles.sort((a, b) => {
+    return a.dataset.index - b.dataset.index;
+  });
 
   articles.forEach(article => {
     article.style.display = "";
+    container.appendChild(article);
   });
 }
+
+
+
+
 
 /* -------------------------
    4.0以上 + 新着順
