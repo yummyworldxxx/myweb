@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YummyWorld</title>
+
+<meta name="description" content="YummyWorld is a food review site featuring actual tastings from Nagoya and around world.">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<h1><a href="indexe.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+<h2>1<2<3(normal)<3.5(pretty good)<4(wanna eat again)<4.5(definitely wanna eat again)<5(god)</h2>
+
+
+<ul>
+<li><a href="index.html"><span class="u-white">【Japanese】</span></a></li>
+<li><a href="nagoyae.html">Nagoya</a></li>
+<li><a href="nagoyaramene.html">NagoyaRamen</a></li>
+<li><a href="tokyo23e.html">Tokyo's 23 Wards</a></li>
+</ul>
+
+
+
+<ul>
+
+<li><a href="marugene.html">Marugen</a></li>
+
+<li><a href="cocoichie.html">CoCoIchibanya</a></li>
+</ul>
+
+
+
+
+<ul>
+<li><a href="kurakatsue.html">KURAKATSU</a></li>
+<li><a href="yoshioe.html">YOSHIO</a></li>
+</ul>
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    post
+  </a>
+</div>
+
+
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="scalee.html">RatingScale</a>
+  <a href="visione.html">Vision</a>
+  <a href="storye.html">Story</a>
+  <a href="contacte.html">Contact</a>
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0+</button>
+ <button onclick="sortByDate()">Newest</button>
+ <button onclick="sortByScore()">Highest Rating</button>
+ <button onclick="sortByScoreLow()">Lowest Rating</button>
+</div>
+
+
+
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+ 
+<button onclick="toggleScoreMenu()">Filter by Rating ▼</button>
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">All</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+<div id="articles">
+
+
+<article> 
+26/9/24（投稿日）TERUO＠teruo<br> 
+Interesting food. I had the fried rice in a large serving.<br> 
+■Fried Rice Set (L)<br> 
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br> 
+■Marugen Ramen (Meito Kanare Store)<br> 
+■Nagoya City<br> 
+■242 yen (price when ordering ramen before 5 p.m. on weekdays)<br> 
+■Ate day：26/8/20<br> 
+<img src="imagenagoya/0820c.jpeg" alt="Fried rice image" width="200" height="220" loading="lazy">（Photo taken by myself） 
+</article>
+
+
+
+
+<article>
+26/9/24（投稿日）TERUO＠teruo<br>
+The meat soba at Marugen is delicious. It draws me in.<br>
+■Meat soba (large serving)<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare store)<br>
+■Nagoya City<br>
+■935 yen<br>
+■Ate day：26/8/20<br>
+<img src="imagenagoya/0820.jpeg" alt="Ramen image" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article> 
+26/9/21（Posted）TERUO＠teruo<br> 
+I had tsukemen at Marugen for the first time. It was delicious. The egg was also delicious.<br> 
+■Meat Soba Tsukemen<br> 
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br> 
+■Marugen Ramen (Meito Kanare Branch)<br> 
+■Nagoya City<br> 
+■1067 yen<br> 
+■Ate day：26/8/16<br> 
+<img src="imagenagoya/0816.jpeg" alt="Image of tsukemen" width="200" height="220" loading="lazy">（Photo taken by myself） 
+</article>
+
+
+
+
+
+
+
+
+
+
+<article>
+26/9/21 (Posted) TERUO @teruo<br>
+Delicious.<br>
+■Meat Soba (Large)<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Branch)<br>
+■Nagoya City<br>
+■935 yen<br>
+■Ate day: 26/8/11<br>
+<img src="imagenagoya/0811.jpeg" alt="Image of ramen" width="200" height="220" loading="lazy">(Photo taken by myself)
+</article>
+
+
+
+
+
+
+<article>
+26/9/20 (Posted) TERUO＠teruo<br>
+The Spicy Meat Soba has the power to make me want to order it. Delicious.<br>
+■Spicy Meat Soba (Large)<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■1100 yen<br>
+■Ate day：26/8/6<br>
+<img src="imagenagoya/0806.jpeg" alt="Ramen photo" width="200" height="220" loading="lazy">(Photo taken by myself)
+</article>
+
+
+
+
+
+<article>
+26/9/20（Posted）TERUO＠teruo<br>
+I can sense some real intelligence in Marugen's fried rice. They leave the final step—mixing it—to the person eating it.<br>
+■Fried Rice Set<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■297 yen (price when ordering ramen)<br>
+■Ate day：26/8/4<br>
+<img src="imagenagoya/08042.jpeg" alt="Image of fried rice" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+
+<article>
+26/9/20（Posted）TERUO＠teruo<br>
+I had the chashu ramen at Marugen for the first time. Pretty good.<br>
+■Chashu Ramen<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■1023 yen<br>
+■Ate day：26/8/4<br>
+<img src="imagenagoya/08041.jpeg" alt="Image of ramen" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article> 
+26/9/14 (Posted) TERUO＠teruo<br> 
+The soup is delicious. As expected, it's delicious.<br> 
+■Spicy Meat Ramen<br> 
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br> 
+■Marugen Ramen (Meito Kanare Store)<br> 
+■Nagoya City<br> 
+■957 yen<br> 
+■Ate day：26/7/22<br> 
+<img src="imagenagoya/0722.jpeg" alt="Image of ramen" width="200" height="220" loading="lazy"> (Photo taken by myself) 
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article> 
+26/9/7（Posted）TERUO＠teruo<br> 
+As expected, the spicy meat soba is delicious. The soup is delicious.<br> 
+■Spicy Meat Soba (Large)<br> 
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br> 
+■Marugen Ramen (Meito Kanare Store)<br> 
+■Nagoya City<br> 
+■1100 yen<br> 
+■Ate day：26/7/14<br> 
+<img src="imagenagoya/07141.jpeg" alt="Ramen image" width="200" height="220" loading="lazy">（自分が撮った写真） 
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/9/1（Posted）TERUO@teruo<br>
+Spicy Meat Soba two days in a row lol. As expected, it's delicious.<br>
+■Spicy Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■957 yen<br>
+■Ate day：26/7/3<br>
+<img src="imagenagoya/0703.jpeg" alt="Ramen photo" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+
+
+
+<article>
+26/9/1（Posted）TERUO@teruo<br>
+I want to eat it again. It's delicious.<br>
+■Spicy Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■957 yen<br>
+■Ate day：26/7/2<br>
+<img src="imagenagoya/0702.jpeg" alt="Ramen photo" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+<article> 
+26/9/1（Posted）TERUO＠teruo<br> 
+The first time in my life trying the Red. It caught my attention. I'd like to have it again sometime.<br> 
+■Red Soy Sauce Tonkotsu Ramen<br> 
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br> 
+■Marugen Ramen (Meito Kanare Branch)<br> 
+■Nagoya City<br> 
+■869 yen<br> 
+■Ate day：26/6/30<br> 
+<img src="imagenagoya/0630.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself) 
+</article>
+
+
+
+
+
+
+
+
+
+
+<article>
+26/8/31（Posted）TERUO＠teruo<br>
+The meat soba was delicious. One slice of chashu came free. The chashu and meat soba didn't have any particularly good combination. The meat soba is already complete as it is.<br>
+■Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Branch)<br>
+■Nagoya City<br>
+■792 yen<br>
+■Ate day：26/6/29<br>
+<img src="imagenagoya/0629.jpeg" alt="Image of ramen" width="200" height="220" loading="lazy">（Photo taken by me）
+</article>
+
+
+
+
+
+<article>
+26/8/31（Posted）TERUO＠teruo<br>
+My first spicy meat soba ever. This is really good. Definitely a hit. It had a nice level of spiciness, too. I really liked it! I want to have it again.<br>
+■Spicy Meat Soba (Large)<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Store)<br>
+■Nagoya City<br>
+■1100 yen<br>
+■Ate day：26/6/24<br>
+<img src="imagenagoya/0624.jpeg" alt="Ramen photo" width="200" height="220" loading="lazy">（Photo taken by me）
+</article>
+
+
+
+
+
+
+
+
+<article>
+26/8/26（Posted）KURAKATSU@kurakatsu<br>
+
+I tried Marugen Ramen's limited-time Spicy Meat Tsukemen! The cold, firm noodles were perfectly coated with the sauce—absolutely delicious! I added even more thick chili oil for an extra kick of spice!<br>
+
+■Spicy Cold Meat Tsukemen<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen（Nagoya Uedanishi Branch）<br>
+■Nagoya City<br>
+■1045 yen<br>
+■Ate day：26/8/8<br>
+<img src="imagenagoya/0808.jpeg" alt="Image of Marugen Ramen" width="200" height="220" loading="lazy">（Photo taken by me）
+</article>
+
+
+
+<article>
+26/8/1 (Posted) TERUO＠teruo<br>
+Delicious. Meat soba really is good.<br>
+■Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen (Meito Kanare Branch)<br>
+■Nagoya City<br>
+■792 yen<br>
+■Ate day: 26/6/22<br>
+<img src="imagenagoya/06221.jpeg" alt="Photo of the ramen" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+
+<article>
+26/6/19 (Posted) TERUO＠teruo<br>
+It's delicious. Solidly delicious. The soup is tasty.<br>
+■Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen Meito Kanare Store<br>
+■Nagoya City<br>
+■792 yen<br>
+■Ate day: 26/6/3<br>
+<img src="imagenagoya/0603.jpeg" alt="Photo of ramen" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+
+
+
+
+<article>
+26/4/15 (Posted) TERUO＠teruo<br>
+If it's an extra serving of noodles, it's just normally tasty.<br>
+■Extra noodles for meat soba<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Marugen Ramen (Meito Kanare Branch)<br>
+■Nagoya City<br>
+■165 yen<br>
+■Ate day: 26/4/14<br>
+<img src="imagenagoya/0414k.jpeg" alt="Ramen image" width="200" height="220" loading="lazy"> (Photo taken by myself)
+</article>
+
+
+
+
+
+
+
+<article>
+26/4/14（Posted）TERUO＠teruo<br>
+Good.<br>
+■Meat Soba<br>
+⇒★★★★ <span class="score" data-score="4.0">4.0</span><br>
+■Marugen Ramen Meito Kanare Branch<br>
+■Nagoya City<br>
+■792 yen<br>
+■Ate day：26/4/14<br>
+<img src="imagenagoya/0414.jpeg" alt="Ramen image" width="200" height="220" loading="lazy">（Photo taken by myself）
+</article>
+
+
+
+<article>
+26/3/18 (Posted) TERUO＠teruo<br>
+It was good. The ordering machine UI is not good. It would be better if the basic, standard meat soba ramen were displayed more clearly so you can easily understand which one it is.
+I don’t think it’s a very good way of displaying it. Next time I want to try the basic one. By the way, it was a nice place. I’ll probably go again.
+<br>
+■Ajitama Meat Soba<br>
+⇒★★★⋆ <span class="score" data-score="3.5">3.5</span><br>
+■Marugen Ramen Meito Kanare Branch<br>
+■Nagoya City<br>
+■957 yen<br>
+■Ate day: 26/3/17<br>
+<img src="imagenagoya/0317.png" alt="Ramen image" width="200" height="220"> (Photo taken by myself)
+</article>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <ul>
+    <li>5.0  God</li>
+    <li>4.5  Definitely want to eat again.</li>
+    <li>4.0  Want to eat again.</li>
+    <li>------ The 4.0 Wall ↑ Beyond the high bar of “pretty good” — do I actually want to eat it again?</li>
+    <li>3.5  Pretty good.</li>
+    <li>3.0  Normal.</li>
+    <li>2.0  Not tasty.</li>
+    <li>1.0  Terrible.</li>
+    <li>※If something is “delicious” but doesn’t make you want to eat it again, it’s rated 3.5.</li>
+
+  </ul>
+
+
+
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
