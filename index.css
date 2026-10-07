@@ -126,7 +126,7 @@ display: flex;
 
 
 .site-header h1 {
-  font-size: 34px; 
+  font-size: 30px; 
 }
 
 .site-header h2 {
@@ -143,7 +143,7 @@ display: flex;
 
 
 .logo {
-  width: 23px;   /* ←ここ小さくする */
+  width: 20px;   /* ←ここ小さくする */
      /* 縦横比そのまま */
 }
 

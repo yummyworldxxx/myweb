@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+
+
+
+<link rel="stylesheet" href="index.css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>YOSHIO|YummyWorld</title>
+
+<meta name="description" content="YOSHIOの実食レビュー一覧。">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSVPQGCXG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSVPQGCXG1');
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<header class="site-header">
+<h1><a href="index.html">Y<span class="u-yellow">u</span>mmy<img src="logo.png" alt="Yummy logo" class="logo"></a></h1>
+
+<h2>1<2<3.0(普通)<3.5(普通に美味い)<高い壁<4.0(また食べたい)<4.5(また絶対に食べたい)<5.0(神)</h2>
+
+
+<ul>
+<li><a href="indexe.html"><span class="u-white">【English】</span></a></li>
+<li><a href="nagoya.html">名古屋市</a></li>
+<li><a href="nagoyaramen.html">名古屋市ラーメン</a></li>
+<li><a href="tokyo23.html">東京都23区</a></li>
+</ul>
+
+
+<ul>
+<li><a href="marugen.html">丸源</a></li>
+
+<li><a href="cocoichi.html">ココイチ</a></li>
+
+
+<li><a href="sugakiya.html">スガキヤ</a></li>
+
+
+</ul>
+
+
+
+
+
+<ul>
+<li><a href="kurakatsu.html">KURAKATSU</a></li>
+<li><a href="yoshio.html">YOSHIO</a></li>
+</ul>
+
+
+
+
+
+
+<!-- 投稿ボタン -->
+<div style="text-align:center; margin:11px 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScKPnZL-81FJSANgkziELe0ztXYAz6FoxYSknAMihvWDmdvXQ/viewform?usp=header" 
+     target="_blank" 
+     style="
+       background-color:#ff6b6b;
+       color:white;
+       padding:8px 14px;
+       border-radius:12px;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:13px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+       transition:0.2s;
+     "
+     onmouseover="this.style.backgroundColor='#ff4c4c'"
+     onmouseout="this.style.backgroundColor='#ff6b6b'"
+  >
+    投稿
+  </a>
+</div>
+
+
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu">
+  <a href="scale.html">★の基準</a>
+  <a href="vision.html">Vision</a>
+  <a href="story.html">Story</a>
+  <a href="contact.html">Contact</a>
+  
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+
+<div class="sort-buttons">
+ <button onclick="filterHighScore()">4.0以上</button>
+ <button onclick="sortByDate()">新着順</button>
+ <button onclick="sortByScore()">評価（高い順）</button>
+ <button onclick="sortByScoreLow()">評価（低い順）</button>
+</div>
+
+
+
+<div style="position:relative; display:inline-block;">
+
+  <!-- ボタン -->
+  
+
+<button onclick="toggleScoreMenu()">★で絞り込み ▼</button>
+ 
+
+  
+  <!-- リスト -->
+  <div id="scoreMenu" style="
+    display:none;
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    z-index:100;
+  ">
+    <div onclick="filterByScoreExact(5.0)">★5.0</div>
+    <div onclick="filterByScoreExact(4.5)">★4.5</div>
+    <div onclick="filterByScoreExact(4.0)">★4.0</div>
+    <div onclick="filterByScoreExact(3.5)">★3.5</div>
+    <div onclick="filterByScoreExact(3.0)">★3.0</div>
+    <div onclick="filterByScoreExact(2.0)">★2.0(0件)</div>
+    <div onclick="filterByScoreExact(1.0)">★1.0(0件)</div>
+
+    <hr>
+    <div onclick="resetAll()">全表示</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+
+<div id="articles">
+
+
+
+
+<article>
+26/9/3（投稿日）YOSHIO＠yoshio<br>
+薪窯。サラダにドレッシングドボドボだったから？生地に塩味を感じない。モッツァレラも若干食感あるけど味がしない、ミルキー感もない。生地もパリッと感がなく、これがもちもち系ということか、、コルニチョーネもモサっとはしてないけど、、俺はやっぱりパリッと系が好みだなと実感 とにかく生地とモッツァレラが無味で、トマトの酸味だけの印象。コーヒーもめちゃ薄い サラダと一緒に出されるからぬるめだし 批判ばかりで申し訳ない。<br>
+■ランチセット マルゲリータ<br>
+⇒★★ <span class="score" data-score="2.0">2.0</span><br>
+■PIZZA K（新御茶ノ水店）<br>
+■東京都千代田区<br>
+■1100円<br>
+■Ate day：26/4/28<br>
+<img src="imagetokyo23/0428.jpeg" alt="ピザの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+<article>
+26/9/3（投稿日）YOSHIO＠yoshio<br>
+大きめな薪窯。マルゲリータ注文。15分程で提供。28cm大あり、コルニチョーネや表面や裏面のこげ加減も良好。モッツァレラが酸味があり歯応え抜群、バジルも香り高くめっちゃ美味かった。生地もほぼ塩味ないが、程よいこげと相まって耳まで 美味しい。4種の小麦粉をブレンドして 48時間以上の発酵とのこと。研究すべし。これ作れれば売れる。<br>
+■マルゲリータ ランチセット（×そのまま味わうべし）<br>
+⇒★★★★⋆ <span class="score" data-score="4.5">4.5</span><br>
+■ピッツェリア バッカムニカ<br>
+■東京都品川区東大井<br>
+■1330円<br>
+■Ate day：26/4/17<br>
+<img src="imagetokyo23/04171.jpeg" alt="ピザの画像" width="200" height="220" loading="lazy">
+<img src="imagetokyo23/04172.jpeg" alt="サラダの画像" width="200" height="220" loading="lazy">（自分が撮った写真）
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+26/1/30（投稿日）YOSHIO＠yoshio<br>
+NYスタイルの切り分けピザ。大型のガスオーブンで本場感あり。焼成は約350℃。手のひらより大きい1/8が2枚でボリュームは満足、
+味も悪くはないが、ぼんやりした味のチーズが重く、全体的にファーストフード寄り。トマトのフレッシュさやパリッと感・
+ジューシーさは弱く、モサつく印象。出来立てじゃない前提のNYピザ特性もあるかも。ナポリピッツァ派だと再確認。<br>
+■チーズピザ、ハラペーニョピザ、コーラ<br>
+⇒★★★ <span class="score" data-score="3.0">3.0</span><br>
+■maple pizza<br>
+■東京都台東区<br>
+■総額1600円<br>
+■Ate day：26/1/23<br>
+<img src="imagetokyo23/pizza2.png" alt="ピザの画像" width="200" height="220" loading="lazy">
+</article>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  
+
+ <ul>
+    <li>5.0 神</li>
+    <li>4.5 また絶対に食べたい。</li>
+    <li>4.0 また食べたい。</li>
+    <li>------4.0の壁 ↑「普通にうまい」という高い壁を超えて、また食べたいか。</li>
+    <li>3.5 普通にうまい。</li>
+    <li>3.0 普通。</li>
+    <li>2.0 おいしくない。</li>
+    <li>1.0 最悪。</li>
+    <li>※「うまい（または、めちゃくちゃうまい）」が、「また食べたい」と思わない場合も3.5</li>
+
+  </ul>
+
+
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
